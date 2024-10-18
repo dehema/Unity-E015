@@ -1,0 +1,73 @@
+menu:
+    overview:
+        lang: 概览
+        icon: Art/Icon/0概览
+        child:
+    consumableManage:
+        lang: 耗材管理
+        icon: Art/Icon/11耗材管理
+        child:
+            consumable:
+                lang: 耗材
+                icon: Art/Icon/211耗材
+            detectionReagent:
+                icon: Art/Icon/212检测试剂
+                lang: 检测试剂
+            DNAReagent:
+                lang: 核提试剂
+                icon: Art/Icon/213核提试剂
+    sampleManage:
+        lang: 样本管理
+        icon: Art/Icon/12样本管理
+        child:
+    detectProcess:
+        lang: 检测进度
+        icon: Art/Icon/13检测进度
+        child:
+    resultReport:
+        lang: 结果报告
+        icon: Art/Icon/14结果报告
+        child:
+            detectResult:
+                lang: 检查结果
+                icon: Art/Icon/241检查结果
+            detectReport:
+                lang: 检查报告
+                icon: Art/Icon/242检查报告
+    dailyMaintenance:
+        lang: 日常维护
+        icon: Art/Icon/15日常维护
+        child:
+    systemSetting:
+        lang: 系统设置
+        icon: Art/Icon/16系统设置
+        child:
+            # projectManage:
+            #     lang: 项目管理
+            # lisConfig:
+            #     lang: LIS配置
+            # acctionManage:
+            #     lang: 用户管理
+            # genetalSetting:
+            #     lang: 常规设置
+            # dataManage:
+            #     lang: 数据管理
+            logManage:
+                lang: 日志管理
+                icon: Art/Icon/268日志管理
+            appVersion:
+                lang: 软件版本
+                icon: Art/Icon/269软件版本
+            equipMaintenance:
+                lang: 设备维护
+                icon: Art/Icon/260设备维护
+                child:
+                    axe:
+                        lang: 核提模块
+                        icon: Art/Icon/2601核提
+                    scan:
+                        lang: 样本仓扫码枪
+                        icon: Art/Icon/2602扫码枪
+                    qpcr:
+                        lang: qpcr
+                        icon: Art/Icon/2603qpcr
