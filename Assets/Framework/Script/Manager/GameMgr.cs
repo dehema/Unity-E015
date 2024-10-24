@@ -33,7 +33,7 @@ public class GameMgr : MonoBehaviour
         {
             Application.runInBackground = true;
         }
-        UIMgr.Ins.OpenView<DebugView>();
+        //UIMgr.Ins.OpenView<DebugView>();
         //if (Application.isEditor)
         //{
         //    UIMgr.Ins.OpenView<DebugView>();
@@ -42,6 +42,7 @@ public class GameMgr : MonoBehaviour
         //{
         //    StartGame();
         //}
+        UIMgr.Ins.OpenView<MainView>();
     }
 
     private void Update()
@@ -136,7 +137,12 @@ public class GameMgr : MonoBehaviour
     {
         GameObject go = Instantiate<GameObject>(_origin, _origin.transform.parent);
         go.transform.Find("icon").GetComponent<Image>().sprite = Resources.Load<Sprite>(_model.icon);
-        go.transform.Find("icon/icon").GetComponent<Image>().sprite = Resources.Load<Sprite>(_model.icon);
+        Transform transIcon = go.transform.Find("icon/icon");
+        if (transIcon)
+            transIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>(_model.icon);
+        Transform transCheckMark = go.transform.Find("icon/Checkmark");
+        if (transCheckMark)
+            transCheckMark.GetComponent<Image>().sprite = Resources.Load<Sprite>(_model.icon);
         go.transform.SetAsLastSibling();
         go.SetActive(true);
         go.name = _name;

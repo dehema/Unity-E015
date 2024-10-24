@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public partial class MenuStyleView3 : BaseView
+public partial class MainView : BaseView
 {
     string currFirstMenu;
     public override void Init(params object[] _params)
@@ -61,7 +61,7 @@ public partial class MenuStyleView3 : BaseView
             GameObject menuItem = GameMgr.Ins.getMenuItem(name, menuModel, menu2);
             TextMeshProUGUI text = menuItem.transform.Find("Label").GetComponent<TextMeshProUGUI>();
             if (menuModel.lang.Length == 2)
-                menuItem.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 125);
+                menuItem.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100);
             Toggle toggle = menuItem.GetComponent<Toggle>();
             toggle.onValueChanged.AddListener((bool ison) => { if (ison) showContentPage(name); });
         }

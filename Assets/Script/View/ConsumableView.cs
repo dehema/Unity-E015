@@ -4,4 +4,5 @@ using UnityEngine;
 
 public partial class ConsumableView : BaseView
 {
+
 }

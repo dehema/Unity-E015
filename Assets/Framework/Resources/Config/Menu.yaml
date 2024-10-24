@@ -42,16 +42,21 @@ menu:
         lang: 系统设置
         icon: Art/Icon/16系统设置
         child:
-            # projectManage:
-            #     lang: 项目管理
-            # lisConfig:
-            #     lang: LIS配置
-            # acctionManage:
-            #     lang: 用户管理
-            # genetalSetting:
-            #     lang: 常规设置
-            # dataManage:
-            #     lang: 数据管理
+            projectManage:
+                lang: 项目管理
+                icon: Art/Icon/261项目管理
+            lisConfig:
+                lang: LIS配置
+                icon: Art/Icon/262LIS配置
+            acctionManage:
+                lang: 用户管理
+                icon: Art/Icon/263用户管理
+            genetalSetting:
+                lang: 常规设置
+                icon: Art/Icon/265常规设置
+            dataManage:
+                lang: 数据管理
+                icon: Art/Icon/267数据管理
             logManage:
                 lang: 日志管理
                 icon: Art/Icon/268日志管理

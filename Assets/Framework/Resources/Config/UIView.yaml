@@ -85,3 +85,7 @@ view:
         comment: 样式上左
         layer: NormalUI
         bgColor: "#FFFFFFFF"
+    MainView:
+        comment: 主页
+        layer: NormalUI
+        bgColor: "#FFFFFFFF"
