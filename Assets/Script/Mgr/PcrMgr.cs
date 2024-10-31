@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //ÊÔ¼Á
-public enum Reagent
+public enum ReagentType
 {
     /// <summary>
     /// PCRÖÊ¿ØÆ·
@@ -28,7 +28,7 @@ public enum Reagent
 }
 
 //ºÄ²Ä
-public enum Consumable
+public enum ConsumableType
 {
     /// <summary>
     /// ´Å°ôÌ×
@@ -66,44 +66,44 @@ public enum Consumable
 
 public class PcrMgr : MonoSingleton<PcrMgr>
 {
-    public string getReagentName(Reagent _reagent)
+    public string getReagentName(ReagentType _reagent)
     {
         switch (_reagent)
         {
-            case Reagent.PCRQualityControl:
+            case ReagentType.PCRQualityControl:
                 return "PCRÖÊ¿ØÆ·";
-            case Reagent.AXEProteinaseK:
+            case ReagentType.AXEProteinaseK:
                 return "ºËÌáµ°°×Ã¸K";
-            case Reagent.AXEPrepare:
+            case ReagentType.AXEPrepare:
                 return "ºËÌáÖÆ±¸";
-            case Reagent.PCRSystem:
+            case ReagentType.PCRSystem:
                 return "PCRÀ©ÔöÌåÏµ";
-            case Reagent.PCRCalibration:
+            case ReagentType.PCRCalibration:
                 return "PCR¶¨±ê";
             default:
                 return "";
         }
     }
 
-    public string getConsumableName(Consumable _consumable)
+    public string getConsumableName(ConsumableType _consumable)
     {
         switch (_consumable)
         {
-            case Consumable.MagnetSleeve:
+            case ConsumableType.MagnetSleeve:
                 return "Ğı×ª´Å°ôÌ×";
-            case Consumable.Tips100:
+            case ConsumableType.Tips100:
                 return "100ulÇ¹Í·ºĞ";
-            case Consumable.Paraffin:
+            case ConsumableType.Paraffin:
                 return "Ê¯À¯ÓÍ";
-            case Consumable.PorePlate16:
+            case ConsumableType.PorePlate16:
                 return "16¿×°å";
-            case Consumable.MembraneSupport:
+            case ConsumableType.MembraneSupport:
                 return "Ä¤¼Ü";
-            case Consumable.Tips50:
+            case ConsumableType.Tips50:
                 return "50ulÇ¹Í·ºĞ";
-            case Consumable.Tips200:
+            case ConsumableType.Tips200:
                 return "200ulÇ¹Í·ºĞ";
-            case Consumable.AxeKitBox:
+            case ConsumableType.AxeKitBox:
                 return "ºËÌáÊÔ¼ÁºĞ";
             default:
                 return "";

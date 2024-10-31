@@ -89,3 +89,11 @@ view:
         comment: 主页
         layer: NormalUI
         bgColor: "#FFFFFFFF"
+    SelectDetectProjectDialog:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true
+    PatientInfoDialog:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true

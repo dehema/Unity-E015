@@ -48,7 +48,9 @@ public partial class MainView : BaseView
             GameObject.Destroy(menuParent2.transform.GetChild(i).gameObject);
         }
         Dictionary<string, MenuModel> child = GameMgr.Ins.menuConfig.menu[_name].child;
-        menuContent2.SetActive(child != null && child.Count > 0);
+        bool isShowMenu = child != null && child.Count > 0;
+        menuContent2.SetActive(isShowMenu);
+        contentPage_Rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, isShowMenu ? canvas.pixelRect.width - 70 : canvas.pixelRect.width);
         showContentPage(_name);
         if (child == null)
         {

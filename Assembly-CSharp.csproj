@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\View\MenuLeftLvFirstView.cs" />
+    <Compile Include="Assets\Script\View\Overview.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView3.cs" />
     <Compile Include="Assets\Framework\Script\Manager\DataMgr.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadingView.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Framework\Script\Manager\GameSetting.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleView_UI.cs" />
     <Compile Include="Assets\Script\Enum\ActionState.cs" />
+    <Compile Include="Assets\Script\View\SelectDetectProjectDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\View\TipsView.cs" />
     <Compile Include="Assets\Framework\Script\View\DebugView.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBFloat.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\Framework\Script\Data\AudioVolumeData.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleViewParent.cs" />
     <Compile Include="Assets\Script\Enum\BattleState.cs" />
+    <Compile Include="Assets\Script\View\PatientInfoDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\Manager\LangMgr.cs" />
     <Compile Include="Assets\Framework\Script\Manager\AudioMgr.cs" />
     <Compile Include="Assets\Framework\Script\Item\PoolItemBase.cs" />
@@ -106,6 +109,7 @@
     <Compile Include="Assets\Framework\Script\UI\ViewLayerModel.cs" />
     <Compile Include="Assets\Script\View\OverviewView.cs" />
     <Compile Include="Assets\Script\Enum\NavPurpose.cs" />
+    <Compile Include="Assets\Script\Item\SampleTableItem.cs" />
     <Compile Include="Assets\Framework\Script\Config\ImageTextMixConfig.cs" />
     <Compile Include="Assets\Framework\Script\Tools\FontGradient.cs" />
     <Compile Include="Assets\Framework\Script\Config\UIViewGen.cs" />
@@ -114,6 +118,7 @@
     <Compile Include="Assets\Framework\Script\UI\UIViewConfig.cs" />
     <Compile Include="Assets\Framework\Script\Manager\Timer.cs" />
     <Compile Include="Assets\Script\Enum\WorldUnitType.cs" />
+    <Compile Include="Assets\Script\View\SelectDetectProjectDialog.cs" />
     <Compile Include="Assets\Script\Enum\GoLayer.cs" />
     <Compile Include="Assets\Framework\Script\Widget\ShowCommonFloatTips.cs" />
     <Compile Include="Assets\Script\Config\AllFactionConfig.cs" />
@@ -129,6 +134,8 @@
     <Compile Include="Assets\Framework\Script\View\LoadSceneView_UI.cs" />
     <Compile Include="Assets\Framework\Script\Manager\UIMgr.cs" />
     <Compile Include="Assets\Framework\Script\Item\ExampleWidget.cs" />
+    <Compile Include="Assets\Script\View\Consumable.cs" />
+    <Compile Include="Assets\Script\View\PatientInfoDialog.cs" />
     <Compile Include="Assets\Script\Enum\AnimatorParams.cs" />
     <Compile Include="Assets\Framework\Script\Widget\ImageAutoAdaptScreen.cs" />
     <Compile Include="Assets\Script\View\SampleManageView_UI.cs" />
@@ -160,6 +167,7 @@
     <Compile Include="Assets\Script\View\SystemSettingView_UI.cs" />
     <Compile Include="Assets\Script\View\DailyMaintenanceView.cs" />
     <Compile Include="Assets\Script\View\DetectProcessView.cs" />
+    <Compile Include="Assets\Script\View\SampleManage.cs" />
     <Compile Include="Assets\Script\Enum\RaceType.cs" />
     <Compile Include="Assets\Script\Config\WorldConfig.cs" />
     <Compile Include="Assets\Framework\Script\Data\SettingData.cs" />
@@ -183,6 +191,7 @@
     <Compile Include="Assets\Framework\Script\DataBinding\DBHandler.cs" />
     <Compile Include="Assets\Framework\Script\UI\BaseUI.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadSceneView.cs" />
+    <Compile Include="Assets\Script\Item\SampleTableItem_UI.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView1.cs" />
     <Compile Include="Assets\Framework\Script\Data\GameData.cs" />
     <Compile Include="Assets\Framework\Script\Manager\Utility.cs" />
@@ -571,7 +580,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DotLiquid">

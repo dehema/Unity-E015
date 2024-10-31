@@ -88,55 +88,55 @@ public class MachinePlanform : MonoBehaviour
         }
     }
 
-    public List<Toggle> GetReagent(Reagent _reagent)
+    public List<Toggle> GetReagent(ReagentType _reagent)
     {
         switch (_reagent)
         {
-            case Reagent.PCRQualityControl:
-                break;
-            case Reagent.AXEProteinaseK:
-                break;
-            case Reagent.AXEPrepare:
-                break;
-            case Reagent.PCRSystem:
-                break;
-            case Reagent.PCRCalibration:
-                break;
+            case ReagentType.PCRQualityControl:
+                return PCRQualityControl;
+            case ReagentType.AXEProteinaseK:
+                return AXEProteinaseK;
+            case ReagentType.AXEPrepare:
+                return AXEPrepare;
+            case ReagentType.PCRSystem:
+                return PCRSystem;
+            case ReagentType.PCRCalibration:
+                return PCRCalibration;
         }
         return null;
     }
 
-    public List<Toggle> GetConsumable(Consumable _consumable)
+    public List<Toggle> GetConsumable(ConsumableType _consumable)
     {
         switch (_consumable)
         {
-            case Consumable.MagnetSleeve:
-                break;
-            case Consumable.Tips100:
-                break;
-            case Consumable.Paraffin:
-                break;
-            case Consumable.PorePlate16:
-                break;
-            case Consumable.MembraneSupport:
-                break;
-            case Consumable.Tips50:
-                break;
-            case Consumable.Tips200:
-                break;
-            case Consumable.AxeKitBox:
-                break;
+            case ConsumableType.MagnetSleeve:
+                return MagnetSleeve;
+            case ConsumableType.Tips100:
+                return Tips100;
+            case ConsumableType.Paraffin:
+                return Paraffin;
+            case ConsumableType.PorePlate16:
+                return PorePlate16;
+            case ConsumableType.MembraneSupport:
+                return MembraneSupport;
+            case ConsumableType.Tips50:
+                return Tips50;
+            case ConsumableType.Tips200:
+                return Tips200;
+            case ConsumableType.AxeKitBox:
+                return AxeKitBox;
         }
         return null;
     }
 
-    public void SetReagentShow(Reagent _reagent, bool _show)
+    public void ShowReagent(ReagentType _reagent, bool _show)
     {
-        GetReagent(_reagent).ForEach((Toggle tg) => { tg.isOn = _show; });
+        GetReagent(_reagent)?.ForEach((Toggle tg) => { tg.isOn = _show; });
     }
 
-    public void GetConsumable(Consumable _consumable, bool _show)
+    public void ShowConsumable(ConsumableType _consumable, bool _show)
     {
-        GetConsumable(_consumable).ForEach((Toggle tg) => { tg.isOn = _show; });
+        GetConsumable(_consumable)?.ForEach((Toggle tg) => { tg.isOn = _show; });
     }
 }
