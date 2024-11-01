@@ -80,6 +80,7 @@
     <Compile Include="Assets\Framework\Script\View\DebugView.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBFloat.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBObject.cs" />
+    <Compile Include="Assets\Script\View\SampleManageLegendDialog.cs" />
     <Compile Include="Assets\Framework\Script\Item\ExampleWidgetWithSuper_UI.cs" />
     <Compile Include="Assets\Framework\Script\Widget\SingleTemplate\Singleton.cs" />
     <Compile Include="Assets\Script\Mgr\SceneMgr.cs" />
@@ -102,10 +103,12 @@
     <Compile Include="Assets\Framework\Script\UI\IBaseView.cs" />
     <Compile Include="Assets\Framework\Script\UI\MenuConfig.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView2_UI.cs" />
+    <Compile Include="Assets\Script\View\SampleManageLegendDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\View\TopView_UI.cs" />
     <Compile Include="Assets\Framework\Script\Item\ObjPool.cs" />
     <Compile Include="Assets\Framework\Script\Enum\SettingField.cs" />
     <Compile Include="Assets\Script\Enum\UnitType.cs" />
+    <Compile Include="Assets\Script\View\SampleManage_UI.cs" />
     <Compile Include="Assets\Framework\Script\UI\ViewLayerModel.cs" />
     <Compile Include="Assets\Script\View\OverviewView.cs" />
     <Compile Include="Assets\Script\Enum\NavPurpose.cs" />

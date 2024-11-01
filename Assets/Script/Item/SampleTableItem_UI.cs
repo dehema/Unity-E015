@@ -7,6 +7,8 @@ using TMPro;
 public partial class SampleTableItem : BaseUI
 {
     [HideInInspector]
+    public GameObject line;
+    [HideInInspector]
     public GameObject colID;
     [HideInInspector]
     public TextMeshProUGUI colID_TextMeshProUGUI;
@@ -51,6 +53,7 @@ public partial class SampleTableItem : BaseUI
 
     internal void _LoadUI()    
     {
+        line = transform.Find("$line").gameObject;
         colID = transform.Find("hor/$colID#TextMeshProUGUI").gameObject;
         colID_TextMeshProUGUI = colID.GetComponent<TextMeshProUGUI>();
         slotID = transform.Find("hor/$slotID#TextMeshProUGUI").gameObject;

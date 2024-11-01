@@ -97,3 +97,7 @@ view:
         layer: PopUI
         bgColor: "#000000B0"
         bgClose: true
+    SampleManageLegendDialog:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true

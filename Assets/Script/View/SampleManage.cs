@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SampleManage : MonoBehaviour
+public partial class SampleManage : BaseUI
 {
     public GameObject sampleCol;
     public GameObject tbSample;
@@ -15,6 +15,8 @@ public class SampleManage : MonoBehaviour
 
     private void Start()
     {
+        _LoadUI();
+        legend_Button.SetButton(() => { UIMgr.Ins.OpenView<SampleManageLegendDialog>(); });
         //Ñù±¾Ìõ
         for (int i = 0; i < 6; i++)
         {
@@ -38,7 +40,6 @@ public class SampleManage : MonoBehaviour
             {
                 Toggle _tg = samepleItem.GetComponent<Toggle>();
                 _tg.group = toggleGroup;
-                _samepleItemIndex++;
                 int __samepleItemIndex = _samepleItemIndex;
                 _tg.onValueChanged.AddListener((bool _ison) =>
                 {
@@ -48,6 +49,7 @@ public class SampleManage : MonoBehaviour
                         sampleTableItemList[__samepleItemIndex].SetToggle(true);
                     }
                 });
+                _samepleItemIndex++;
             }
         }
         sampleCol.SetActive(false);
@@ -106,8 +108,7 @@ public class SampleManage : MonoBehaviour
                     item.sampleType_TMP_Dropdown.value = _value;
                 }
             });
-            //
-            Instantiate(content.Find("line").gameObject, content).SetActive(true);
+            sampleTableItem.line.SetActive(i < 15);
         }
         originRow.SetActive(false);
     }
