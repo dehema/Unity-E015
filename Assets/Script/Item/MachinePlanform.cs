@@ -94,11 +94,16 @@ public class MachinePlanform : MonoBehaviour
         {
             case ReagentType.PCRQualityControl:
                 return PCRQualityControl;
-            case ReagentType.AXEProteinaseK:
+            case ReagentType.AXELieJie:
+            case ReagentType.AXEXiYe:
+            case ReagentType.AXEXiTuoYe:
+            case ReagentType.AXECiZhuHunXuanYe:
                 return AXEProteinaseK;
             case ReagentType.AXEPrepare:
                 return AXEPrepare;
-            case ReagentType.PCRSystem:
+            case ReagentType.PCRFanYing:
+            case ReagentType.PCRMei:
+            case ReagentType.PCRShiFang:
                 return PCRSystem;
             case ReagentType.PCRCalibration:
                 return PCRCalibration;
@@ -138,5 +143,14 @@ public class MachinePlanform : MonoBehaviour
     public void ShowConsumable(ConsumableType _consumable, bool _show)
     {
         GetConsumable(_consumable)?.ForEach((Toggle tg) => { tg.isOn = _show; });
+    }
+
+    public void setAll(bool _ison)
+    {
+
+        allToggle.ForEach((Toggle _tg) =>
+        {
+            _tg.isOn = _ison;
+        });
     }
 }

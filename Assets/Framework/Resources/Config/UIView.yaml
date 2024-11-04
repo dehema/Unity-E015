@@ -101,3 +101,12 @@ view:
         layer: PopUI
         bgColor: "#000000B0"
         bgClose: true
+    ConsumableLegendDialog:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true
+    ConsumableManageLegendDialog:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true
+

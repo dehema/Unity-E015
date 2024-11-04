@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class Consumable : MonoBehaviour
+public partial class Consumable : BaseUI
 {
     //试剂
     public Toggle tgReagent;
@@ -16,11 +18,19 @@ public class Consumable : MonoBehaviour
     public GameObject tbReagent;
     //耗材
     public GameObject tbConsumable;
-
-    public MachinePlanform planform;
+    //试剂
+    public GameObject rowReagent;
+    //耗材
+    public GameObject rowConsumable;
 
     public void Start()
     {
+        _LoadUI();
+        legend_Button.onClick.AddListener(() => { UIMgr.Ins.OpenView<ConsumableManageLegendDialog>(); });
+        tbReagent.SetActive(true);
+        tbConsumable.SetActive(false);
+        rowReagent.SetActive(false);
+        rowConsumable.SetActive(false);
         tgReagent.onValueChanged.AddListener((bool _isOn) =>
         {
             tbReagent.SetActive(_isOn);
@@ -43,71 +53,79 @@ public class Consumable : MonoBehaviour
         RefreshTbReagent();
     }
 
-    void RefreshTbReagent()
+
+    void ClearTb()
     {
-        Transform content = tbReagent.transform.Find("Viewport/Content");
+        Transform content = tbReagent.transform.parent;
         for (int i = 0; i < content.childCount; i++)
         {
-            if (i >= 3)
+            if (i >= 4)
             {
                 Destroy(content.GetChild(i).gameObject);
             }
         }
-        Array values = Enum.GetValues(typeof(ReagentType));
-        foreach (ReagentType item in values)
-        {
-            addReagentItem(item);
-        }
     }
 
-    void addReagentItem(ReagentType _type)
+    void RefreshTbReagent()
     {
-        Transform content = tbReagent.transform.Find("Viewport/Content");
-        GameObject item = Instantiate(content.Find("item").gameObject, content);
-        item.SetActive(true);
-        item.transform.Find("Toggle").GetComponent<Toggle>().onValueChanged.AddListener((bool _isOn) =>
+        ClearTb();
+        Array values = Enum.GetValues(typeof(ReagentType));
+        List<GameObject> itemList = new List<GameObject>();
+        foreach (ReagentType item in values)
         {
-            planform.ShowReagent(_type, _isOn);
-        });
-        item.transform.Find("名称").GetComponent<TextMeshProUGUI>().text = PcrMgr.Ins.getReagentName(_type);
-        item.transform.Find("剩余数量").GetComponent<TextMeshProUGUI>().text = Random.Range(1, 100).ToString();
-        item.transform.Find("失效日期").GetComponent<TextMeshProUGUI>().text = DateTime.Now.AddDays(Random.Range(1, 100)).ToString("d");
-        item.transform.Find("批号").GetComponent<TextMeshProUGUI>().text = "24040910T" + (369 + Random.Range(1, 100)).ToString();
+            itemList.Add(addReagentItem(item));
+        }
+        GameObject lastItem = itemList.Last();
+        lastItem.transform.Find("line").gameObject.SetActive(false);
+    }
 
-        Instantiate(content.Find("line").gameObject, content).SetActive(true);
+    GameObject addReagentItem(ReagentType _type)
+    {
+        GameObject item = Instantiate(rowReagent, rowReagent.transform.parent);
+        item.SetActive(true);
+        //item.transform.Find("Toggle").GetComponent<Toggle>().onValueChanged.AddListener((bool _isOn) =>
+        //{
+        //planform.ShowReagent(_type, _isOn);
+        //});
+        ReagentType type = _type;
+        item.transform.Find("hor/名称").GetComponent<TextMeshProUGUI>().text = PcrMgr.Ins.getReagentName(_type) + DateTime.Now.ToString("MMdd");
+        item.transform.Find("hor/类型").GetComponent<TextMeshProUGUI>().text = PcrMgr.Ins.getReagentType(_type);
+        item.transform.Find("hor/剩余数量").GetComponent<TextMeshProUGUI>().text = Random.Range(1, 100).ToString();
+        item.transform.Find("hor/失效日期").GetComponent<TextMeshProUGUI>().text = DateTime.Now.AddDays(Random.Range(1, 100)).ToString("d");
+        item.transform.Find("hor/批号").GetComponent<TextMeshProUGUI>().text = "24040910T" + (369 + Random.Range(1, 100)).ToString();
+        item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() => { UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { true, (int)type }); });
+
+        return item;
     }
 
     void RefreshTbConsumable()
     {
-        Transform content = tbConsumable.transform.Find("Viewport/Content");
-        for (int i = 0; i < content.childCount; i++)
-        {
-            if (i >= 3)
-            {
-                Destroy(content.GetChild(i).gameObject);
-            }
-        }
+        ClearTb();
         Array values = Enum.GetValues(typeof(ConsumableType));
+        List<GameObject> itemList = new List<GameObject>();
         foreach (ConsumableType item in values)
         {
-            addConsumableItem(item);
+            itemList.Add(addConsumableItem(item));
         }
+        GameObject lastItem = itemList.Last();
+        lastItem.transform.Find("line").gameObject.SetActive(false);
     }
 
-    void addConsumableItem(ConsumableType _type)
+    GameObject addConsumableItem(ConsumableType _type)
     {
-        Transform content = tbConsumable.transform.Find("Viewport/Content");
-        GameObject item = Instantiate(content.Find("item").gameObject, content);
+        GameObject item = Instantiate(rowConsumable, rowConsumable.transform.parent);
         item.SetActive(true);
-        item.transform.Find("Toggle").GetComponent<Toggle>().onValueChanged.AddListener((bool _isOn) =>
-        {
-            planform.ShowConsumable(_type, _isOn);
-        });
-        item.transform.Find("名称").GetComponent<TextMeshProUGUI>().text = PcrMgr.Ins.getConsumableName(_type);
-        item.transform.Find("剩余数量").GetComponent<TextMeshProUGUI>().text = Random.Range(1, 100).ToString();
-        item.transform.Find("失效日期").GetComponent<TextMeshProUGUI>().text = DateTime.Now.AddDays(Random.Range(1, 100)).ToString("d");
-        item.transform.Find("批号").GetComponent<TextMeshProUGUI>().text = "24040910T" + (369 + Random.Range(1, 100)).ToString();
-
-        Instantiate(content.Find("line").gameObject, content).SetActive(true);
+        //item.transform.Find("Toggle").GetComponent<Toggle>().onValueChanged.AddListener((bool _isOn) =>
+        //{
+        //planform.ShowConsumable(_type, _isOn);
+        //});
+        ConsumableType type = _type;
+        item.transform.Find("hor/名称").GetComponent<TextMeshProUGUI>().text = PcrMgr.Ins.getConsumableName(_type) + DateTime.Now.ToString("MMdd");
+        item.transform.Find("hor/类型").GetComponent<TextMeshProUGUI>().text = PcrMgr.Ins.getConsumableName(_type);
+        item.transform.Find("hor/剩余数量").GetComponent<TextMeshProUGUI>().text = Random.Range(1, 100).ToString();
+        item.transform.Find("hor/失效日期").GetComponent<TextMeshProUGUI>().text = DateTime.Now.AddDays(Random.Range(1, 100)).ToString("d");
+        item.transform.Find("hor/批号").GetComponent<TextMeshProUGUI>().text = "24040910T" + (369 + Random.Range(1, 100)).ToString();
+        item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() => { UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { false, (int)type }); });
+        return item;
     }
 }

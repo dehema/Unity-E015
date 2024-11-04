@@ -85,10 +85,12 @@
     <Compile Include="Assets\Framework\Script\Widget\SingleTemplate\Singleton.cs" />
     <Compile Include="Assets\Script\Mgr\SceneMgr.cs" />
     <Compile Include="Assets\Framework\Script\View\DebugView_UI.cs" />
+    <Compile Include="Assets\Script\View\ConsumableManageLegendDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\Config\GameSettingConfig.cs" />
     <Compile Include="Assets\Framework\Script\Manager\RandomTools.cs" />
     <Compile Include="Assets\Framework\Script\Manager\PoolMgr.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBString.cs" />
+    <Compile Include="Assets\Script\View\ConsumableManageLegendDialog.cs" />
     <Compile Include="Assets\Framework\Script\Data\AudioVolumeData.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleViewParent.cs" />
     <Compile Include="Assets\Script\Enum\BattleState.cs" />
@@ -133,6 +135,7 @@
     <Compile Include="Assets\Framework\Script\Manager\Tools.cs" />
     <Compile Include="Assets\Framework\Script\UI\ViewConfigModel.cs" />
     <Compile Include="Assets\Framework\Script\Item\ExampleWidgetWithSuper.cs" />
+    <Compile Include="Assets\Script\View\ConsumableLegendDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleView.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadSceneView_UI.cs" />
     <Compile Include="Assets\Framework\Script\Manager\UIMgr.cs" />
@@ -151,6 +154,7 @@
     <Compile Include="Assets\Framework\Script\Widget\SingleTemplate\MonoSingleton.cs" />
     <Compile Include="Assets\Script\View\ConsumableView_UI.cs" />
     <Compile Include="Assets\Script\Enum\TimeSpeed.cs" />
+    <Compile Include="Assets\Script\View\ConsumableLegendDialog.cs" />
     <Compile Include="Assets\Script\Item\MenuToggleItem.cs" />
     <Compile Include="Assets\Framework\Script\UI\ViewShowMethod.cs" />
     <Compile Include="Assets\Framework\Script\View\TopView.cs" />
@@ -196,6 +200,7 @@
     <Compile Include="Assets\Framework\Script\View\LoadSceneView.cs" />
     <Compile Include="Assets\Script\Item\SampleTableItem_UI.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView1.cs" />
+    <Compile Include="Assets\Script\View\Consumable_UI.cs" />
     <Compile Include="Assets\Framework\Script\Data\GameData.cs" />
     <Compile Include="Assets\Framework\Script\Manager\Utility.cs" />
     <Compile Include="Assets\Framework\Script\Item\Lang.cs" />

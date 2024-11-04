@@ -10,9 +10,21 @@ public enum ReagentType
     /// </summary>
     PCRQualityControl,
     /// <summary>
-    /// 核提蛋白酶K
+    /// 核提裂解液
     /// </summary>
-    AXEProteinaseK,
+    AXELieJie,
+    /// <summary>
+    /// 核提洗液
+    /// </summary>
+    AXEXiYe,
+    /// <summary>
+    /// 核提洗脱液
+    /// </summary>
+    AXEXiTuoYe,
+    /// <summary>
+    /// 核提磁珠混悬液
+    /// </summary>
+    AXECiZhuHunXuanYe,
     /// <summary>
     /// 核提制备
     /// </summary>
@@ -20,7 +32,15 @@ public enum ReagentType
     /// <summary>
     /// PCR扩增体系
     /// </summary>
-    PCRSystem,
+    PCRFanYing,
+    /// <summary>
+    /// PCR酶
+    /// </summary>
+    PCRMei,
+    /// <summary>
+    /// PCR核酸释放剂
+    /// </summary>
+    PCRShiFang,
     /// <summary>
     /// PCR定标
     /// </summary>
@@ -72,17 +92,45 @@ public class PcrMgr : MonoSingleton<PcrMgr>
         {
             case ReagentType.PCRQualityControl:
                 return "PCR质控品";
-            case ReagentType.AXEProteinaseK:
-                return "核提蛋白酶K";
+            case ReagentType.AXELieJie:
+                return "核提裂解液";
+            case ReagentType.AXEXiYe:
+                return "核提洗液";
+            case ReagentType.AXEXiTuoYe:
+                return "核提洗脱液";
+            case ReagentType.AXECiZhuHunXuanYe:
+                return "核提磁珠混悬液";
             case ReagentType.AXEPrepare:
                 return "核提制备";
-            case ReagentType.PCRSystem:
-                return "PCR扩增体系";
+            case ReagentType.PCRFanYing:
+                return "PCR反应液";
+            case ReagentType.PCRMei:
+                return "PCR酶";
+            case ReagentType.PCRShiFang:
+                return "PCR核酸释放剂";
             case ReagentType.PCRCalibration:
                 return "PCR定标";
             default:
                 return "";
         }
+    }
+
+    public string getReagentType(ReagentType _reagent)
+    {
+        string name;
+        if (_reagent == ReagentType.AXECiZhuHunXuanYe || _reagent == ReagentType.AXELieJie || _reagent == ReagentType.AXEPrepare || _reagent == ReagentType.AXEXiTuoYe || _reagent == ReagentType.AXEXiYe)
+        {
+            return "核提制备体系";
+        }
+        else if (_reagent == ReagentType.PCRMei || _reagent == ReagentType.PCRFanYing || _reagent == ReagentType.PCRShiFang)
+        {
+            return "PCR扩提体系";
+        }
+        else
+        {
+            name = getReagentName(_reagent);
+        }
+        return name;
     }
 
     public string getConsumableName(ConsumableType _consumable)

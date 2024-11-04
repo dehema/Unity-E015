@@ -3,19 +3,19 @@ menu:
         lang: 概览
         icon: Art/Icon/0概览
         child:
-    consumableManage:
+    Consumable:
         lang: 耗材管理
         icon: Art/Icon/11耗材管理
         child:
-            consumable:
-                lang: 耗材
-                icon: Art/Icon/211耗材
-            detectionReagent:
-                icon: Art/Icon/212检测试剂
-                lang: 检测试剂
-            DNAReagent:
-                lang: 核提试剂
-                icon: Art/Icon/213核提试剂
+            # consumable:
+            #     lang: 耗材
+            #     icon: Art/Icon/211耗材
+            # detectionReagent:
+            #     icon: Art/Icon/212检测试剂
+            #     lang: 检测试剂
+            # DNAReagent:
+            #     lang: 核提试剂
+            #     icon: Art/Icon/213核提试剂
     sampleManage:
         lang: 样本管理
         icon: Art/Icon/12样本管理

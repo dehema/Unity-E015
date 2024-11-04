@@ -456,6 +456,8 @@ MonoBehaviour:
   content_Rect: {fileID: 0}
   save: {fileID: 0}
   save_Button: {fileID: 0}
+  saveAll: {fileID: 0}
+  saveAll_Button: {fileID: 0}
 --- !u!1 &2420202476750302793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,8 +1030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 361, y: 30}
-  m_SizeDelta: {x: 231.6011, y: 40}
+  m_AnchoredPosition: {x: 351.88892, y: 30}
+  m_SizeDelta: {x: 249.8232, y: 40}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7551761521741212596
 CanvasRenderer:
@@ -1474,7 +1476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5E94\u7528\u5230\u6240\u6709\u6837\u672C"
+  m_text: "\u5E94\u7528\u5230\u5F53\u524D\u6837\u672C\u67B6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5a2ada401bfb844b8ed7d771098fb44, type: 2}
   m_sharedMaterial: {fileID: -6062937160550732625, guid: a5a2ada401bfb844b8ed7d771098fb44, type: 2}
