@@ -9,8 +9,9 @@ public partial class shutDown : BaseUI
         _LoadUI();
         shutdown_Button.onClick.AddListener(() =>
         {
-            Canvas canvas = GetComponentInParent<Canvas>();
-            canvas.GetComponent<BaseView>().Close();
+            //Canvas canvas = GetComponentInParent<Canvas>();
+            //canvas.GetComponent<BaseView>().Close();
+            Application.Quit();
         });
     }
 }
