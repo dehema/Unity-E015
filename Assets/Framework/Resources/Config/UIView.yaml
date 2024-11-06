@@ -109,4 +109,14 @@ view:
         layer: PopUI
         bgColor: "#000000B0"
         bgClose: true
+    EquipMaintenanceView:
+        comment: 设备维护
+        layer: NormalUI
+        bgColor: "#FFFFFFFF"
+        escClose: true
+    DetectProcessLegendDialog:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true
+
 

@@ -63,7 +63,7 @@ menu:
             appVersion:
                 lang: 软件版本
                 icon: Art/Icon/269软件版本
-            equipMaintenance:
+            EquipMaintenance:
                 lang: 设备维护
                 icon: Art/Icon/260设备维护
                 child:

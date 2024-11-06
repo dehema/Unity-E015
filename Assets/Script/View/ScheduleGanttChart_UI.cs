@@ -7,6 +7,10 @@ using TMPro;
 public partial class ScheduleGanttChart : BaseUI
 {
     [HideInInspector]
+    public GameObject legend;
+    [HideInInspector]
+    public Button legend_Button;
+    [HideInInspector]
     public GameObject title;
     [HideInInspector]
     public RectTransform title_Rect;
@@ -43,14 +47,28 @@ public partial class ScheduleGanttChart : BaseUI
     [HideInInspector]
     public TextMeshProUGUI time8_TextMeshProUGUI;
     [HideInInspector]
-    public GameObject ver;
+    public GameObject time9;
     [HideInInspector]
-    public VerticalLayoutGroup ver_VerticalLayoutGroup;
+    public TextMeshProUGUI time9_TextMeshProUGUI;
+    [HideInInspector]
+    public GameObject time10;
+    [HideInInspector]
+    public TextMeshProUGUI time10_TextMeshProUGUI;
+    [HideInInspector]
+    public GameObject scheduleIParent;
+    [HideInInspector]
+    public RectTransform scheduleIParent_Rect;
+    [HideInInspector]
+    public ToggleGroup scheduleIParent_ToggleGroup;
     [HideInInspector]
     public GameObject scheduleItem;
+    [HideInInspector]
+    public RectTransform scheduleItem_Rect;
 
     internal void _LoadUI()    
     {
+        legend = transform.Find("$legend#Button").gameObject;
+        legend_Button = legend.GetComponent<Button>();
         title = transform.Find("$title#Rect").gameObject;
         title_Rect = title.GetComponent<RectTransform>();
         time1 = transform.Find("$title#Rect/hor/$time1#TextMeshProUGUI").gameObject;
@@ -69,8 +87,14 @@ public partial class ScheduleGanttChart : BaseUI
         time7_TextMeshProUGUI = time7.GetComponent<TextMeshProUGUI>();
         time8 = transform.Find("$title#Rect/hor/$time8#TextMeshProUGUI").gameObject;
         time8_TextMeshProUGUI = time8.GetComponent<TextMeshProUGUI>();
-        ver = transform.Find("$ver#VerticalLayoutGroup").gameObject;
-        ver_VerticalLayoutGroup = ver.GetComponent<VerticalLayoutGroup>();
-        scheduleItem = transform.Find("$ver#VerticalLayoutGroup/$scheduleItem").gameObject;
+        time9 = transform.Find("$title#Rect/hor/$time9#TextMeshProUGUI").gameObject;
+        time9_TextMeshProUGUI = time9.GetComponent<TextMeshProUGUI>();
+        time10 = transform.Find("$title#Rect/hor/$time10#TextMeshProUGUI").gameObject;
+        time10_TextMeshProUGUI = time10.GetComponent<TextMeshProUGUI>();
+        scheduleIParent = transform.Find("$scheduleIParent#Rect,ToggleGroup").gameObject;
+        scheduleIParent_Rect = scheduleIParent.GetComponent<RectTransform>();
+        scheduleIParent_ToggleGroup = scheduleIParent.GetComponent<ToggleGroup>();
+        scheduleItem = transform.Find("$scheduleIParent#Rect,ToggleGroup/$scheduleItem#Rect").gameObject;
+        scheduleItem_Rect = scheduleItem.GetComponent<RectTransform>();
     }
 }
