@@ -118,5 +118,9 @@ view:
         layer: PopUI
         bgColor: "#000000B0"
         bgClose: true
+    DetectProcessDetailDialog:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true
 
 

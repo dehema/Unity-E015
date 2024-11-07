@@ -6,28 +6,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScheduleInfo
-{
-    public string scheduleID = "检测项目";
-    public float duration = 120;
-    public string detectProject = "HPV";
-    public bool isStart;
-    public DateTime startTime;
-
-    public ScheduleInfo(bool _isSart = false)
-    {
-        scheduleID = "检测项目" + DateTime.Now.ToString("hhmm");
-        isStart = _isSart;
-        if (_isSart)
-        {
-            startTime = DateTime.Now.AddMinutes(UnityEngine.Random.Range(-60, 90));
-        }
-    }
-}
-
 public partial class ScheduleGanttChart : BaseUI
 {
-    List<ScheduleItem> scheduleItemList = new List<ScheduleItem>();
+    public List<ScheduleItem> scheduleItemList = new List<ScheduleItem>();
     List<TextMeshProUGUI> timeList = new List<TextMeshProUGUI>();
     List<DateTime> dateTimeList = new List<DateTime>();
     const float lineWidth = 2;
@@ -66,16 +47,6 @@ public partial class ScheduleGanttChart : BaseUI
         }
         startTime = dateTimeList.First();
         endTime = dateTimeList.Last();
-        createScheduleInfo(new ScheduleInfo(true));
-        createScheduleInfo(new ScheduleInfo(true));
-        createScheduleInfo(new ScheduleInfo(true));
-        createScheduleInfo(new ScheduleInfo(true));
-        createScheduleInfo(new ScheduleInfo(false));
-        createScheduleInfo(new ScheduleInfo(false));
-        createScheduleInfo(new ScheduleInfo(false));
-        createScheduleInfo(new ScheduleInfo(false));
-        scheduleItemList.First().toggle_Toggle.isOn = true;
-
         legend_Button.onClick.AddListener(() => { UIMgr.Ins.OpenView<DetectProcessLegendDialog>(); });
     }
 
@@ -88,7 +59,7 @@ public partial class ScheduleGanttChart : BaseUI
         return width;
     }
 
-    public void createScheduleInfo(ScheduleInfo _info)
+    public void createScheduleInfo(DetectProcessInfo _info)
     {
         GameObject item = Instantiate<GameObject>(scheduleItem, scheduleItem.transform.parent);
         item.SetActive(true);
@@ -108,23 +79,23 @@ public partial class ScheduleGanttChart : BaseUI
         rect.anchoredPosition = new Vector2(getScheduleItemPosX(_info, rect), -5 - (5 + scheduleItemHeight) * index);
     }
 
-    public void onScheduleItemClick(ScheduleInfo _info)
+    public void onScheduleItemClick(DetectProcessInfo _info)
     {
 
     }
 
-    public float getScheduleItemPosX(ScheduleInfo _info, RectTransform _rect)
+    public float getScheduleItemPosX(DetectProcessInfo _info, RectTransform _rect)
     {
-        if (!_info.isStart)
+        if (_info.status == DetectProcessStatus.Detect)
         {
-            return scheduleIParent_Rect.rect.width - _rect.rect.width;
-        }
-        else
-        {
-            double min = (_info.startTime - startTime).TotalMinutes;
+            double min = (DateTime.Now - startTime).TotalMinutes;
             double width = itemSlotWidth * (min / 30f);
             float posX = (float)width;
             return posX;
+        }
+        else
+        {
+            return scheduleIParent_Rect.rect.width - _rect.rect.width;
         }
     }
 }

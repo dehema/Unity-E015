@@ -11,10 +11,6 @@ public partial class DetectProcess : BaseUI
     [HideInInspector]
     public ScheduleGanttChart scheduleGanttChart_ScheduleGanttChart;
     [HideInInspector]
-    public GameObject sampleCol;
-    [HideInInspector]
-    public Transform sampleCol_Transform;
-    [HideInInspector]
     public GameObject processInfoParent;
     [HideInInspector]
     public ScrollRect processInfoParent_ScrollRect;
@@ -31,13 +27,11 @@ public partial class DetectProcess : BaseUI
     {
         scheduleGanttChart = transform.Find("$scheduleGanttChart#ScheduleGanttChart").gameObject;
         scheduleGanttChart_ScheduleGanttChart = scheduleGanttChart.GetComponent<ScheduleGanttChart>();
-        sampleCol = transform.Find("$sampleCol#Transform").gameObject;
-        sampleCol_Transform = sampleCol.GetComponent<Transform>();
-        processInfoParent = transform.Find("$processInfoParent#ScrollRect").gameObject;
+        processInfoParent = transform.Find("right/$processInfoParent#ScrollRect").gameObject;
         processInfoParent_ScrollRect = processInfoParent.GetComponent<ScrollRect>();
-        detectProcessContent = transform.Find("$processInfoParent#ScrollRect/Viewport/$detectProcessContent#Rect,VerticalLayoutGroup").gameObject;
+        detectProcessContent = transform.Find("right/$processInfoParent#ScrollRect/Viewport/$detectProcessContent#Rect,VerticalLayoutGroup").gameObject;
         detectProcessContent_Rect = detectProcessContent.GetComponent<RectTransform>();
         detectProcessContent_VerticalLayoutGroup = detectProcessContent.GetComponent<VerticalLayoutGroup>();
-        detectProcessItem = transform.Find("$processInfoParent#ScrollRect/Viewport/$detectProcessContent#Rect,VerticalLayoutGroup/$detectProcessItem").gameObject;
+        detectProcessItem = transform.Find("right/$processInfoParent#ScrollRect/Viewport/$detectProcessContent#Rect,VerticalLayoutGroup/$detectProcessItem").gameObject;
     }
 }

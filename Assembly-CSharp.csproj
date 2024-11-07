@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\View\MenuStyleView3.cs" />
     <Compile Include="Assets\Framework\Script\Manager\DataMgr.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadingView.cs" />
+    <Compile Include="Assets\Script\View\DetectProcessDetailDialog.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleView_UI.cs" />
     <Compile Include="Assets\Script\View\SelectDetectProjectDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBFloat.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Framework\Script\Manager\PoolMgr.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleViewParent.cs" />
     <Compile Include="Assets\Script\View\PatientInfoDialog_UI.cs" />
+    <Compile Include="Assets\Script\View\DetectProcessTab_UI.cs" />
     <Compile Include="Assets\Script\View\ResultReportView.cs" />
     <Compile Include="Assets\Framework\Script\UI\MenuConfig.cs" />
     <Compile Include="Assets\Framework\Script\View\TopView_UI.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Assets\Framework\Script\Widget\ImageAutoAdaptScreen.cs" />
     <Compile Include="Assets\Script\View\SampleManageView_UI.cs" />
     <Compile Include="Assets\Script\View\MainView_UI.cs" />
+    <Compile Include="Assets\Script\View\DetectProcessTab.cs" />
     <Compile Include="Assets\Framework\Script\Widget\SingleTemplate\MonoSingleton.cs" />
     <Compile Include="Assets\Script\View\ConsumableLegendDialog.cs" />
     <Compile Include="Assets\Script\View\MenuContentLeftLeft2.cs" />
@@ -113,12 +116,12 @@
     <Compile Include="Assets\Script\View\shutDown.cs" />
     <Compile Include="Assets\Framework\Script\Data\PlayerData.cs" />
     <Compile Include="Assets\Script\View\SystemSettingView_UI.cs" />
+    <Compile Include="Assets\Script\View\DetectProcessDetailDialog_UI.cs" />
     <Compile Include="Assets\Script\Enum\RaceType.cs" />
     <Compile Include="Assets\Framework\Script\Data\SettingData.cs" />
     <Compile Include="Assets\Script\Enum\PrefabPath.cs" />
     <Compile Include="Assets\Framework\Script\View\BlockView_UI.cs" />
     <Compile Include="Assets\Script\View\SampleManageView.cs" />
-    <Compile Include="Assets\Script\View\DetectProcessInfo.cs" />
     <Compile Include="Assets\Script\Config\AllUnitConfig.cs" />
     <Compile Include="Assets\Framework\Script\Config\ConfigBase.cs" />
     <Compile Include="Assets\Script\View\DetectProcessView_UI.cs" />
@@ -183,7 +186,6 @@
     <Compile Include="Assets\Framework\Script\Tools\MultiplyGradientColor.cs" />
     <Compile Include="Assets\Framework\Script\Manager\Tools.cs" />
     <Compile Include="Assets\Script\View\DetectProcess_UI.cs" />
-    <Compile Include="Assets\Script\View\DetectProcessInfo_UI.cs" />
     <Compile Include="Assets\Script\View\Consumable.cs" />
     <Compile Include="Assets\Framework\Script\Manager\GameMgr.cs" />
     <Compile Include="Assets\Script\Config\AllCityConfig.cs" />
