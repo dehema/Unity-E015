@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public partial class DetectProcess : BaseUI
 {
     List<DetectProcessTab> detectProcessInfoList = new List<DetectProcessTab>();
+    TimerHandler timerHandler;
 
     void Start()
     {
@@ -34,9 +35,14 @@ public partial class DetectProcess : BaseUI
         float contentHeight = (detectProcessInfoList.Count - 1) * (detectProcessContent_VerticalLayoutGroup.spacing + 102) + 380;
         detectProcessContent_Rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, contentHeight);
 
-        Timer.Ins.SetTimeOut(() =>
+        timerHandler = Timer.Ins.SetTimeOut(() =>
         {
             detectProcessInfoList.First().GetComponent<Toggle>().isOn = true;
         }, 0.5f);
+    }
+
+    private void OnDestroy()
+    {
+        timerHandler.Remove();
     }
 }

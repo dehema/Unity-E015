@@ -111,6 +111,7 @@
     <Compile Include="Assets\Script\View\ConsumableLegendDialog.cs" />
     <Compile Include="Assets\Script\View\MenuContentLeftLeft2.cs" />
     <Compile Include="Assets\Framework\Script\View\ImageTextMixView.cs" />
+    <Compile Include="Assets\Script\View\Overview_UI.cs" />
     <Compile Include="Assets\Script\Enum\BuildingType.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBInt.cs" />
     <Compile Include="Assets\Script\View\shutDown.cs" />

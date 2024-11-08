@@ -1,9 +1,10 @@
+using com.adjust.sdk;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Overview : MonoBehaviour
+public partial class Overview : BaseUI
 {
     public Button btQPCR;
     public Button btAxe;
@@ -14,7 +15,7 @@ public class Overview : MonoBehaviour
 
     private void Start()
     {
-
+        _LoadUI();
         btQPCR.onClick.AddListener(() =>
         {
             btQPCR.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 1);
@@ -42,6 +43,22 @@ public class Overview : MonoBehaviour
             axe.SetActive(false);
             sample.SetActive(true);
         });
+
+        reagent_Toggle.onValueChanged.AddListener((bool _ison) =>
+        {
+            pageOverview.SetActive(_ison);
+        });
+
+        equip_Toggle.onValueChanged.AddListener((bool _ison) =>
+        {
+            pageEqupState.SetActive(_ison);
+        });
+
+        pageOverview.SetActive(true);
+        pageEqupState.SetActive(false);
+
+
         btQPCR.onClick.Invoke();
+        reagent_Toggle.isOn = true;
     }
 }
