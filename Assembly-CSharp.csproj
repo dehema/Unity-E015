@@ -68,6 +68,7 @@
     <Compile Include="Assets\Framework\Script\Manager\DataMgr.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadingView.cs" />
     <Compile Include="Assets\Script\View\DetectProcessDetailDialog.cs" />
+    <Compile Include="Assets\Script\View\ProjectManageView.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleView_UI.cs" />
     <Compile Include="Assets\Script\View\SelectDetectProjectDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBFloat.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Assets\Script\View\shutDown.cs" />
     <Compile Include="Assets\Framework\Script\Data\PlayerData.cs" />
     <Compile Include="Assets\Script\View\SystemSettingView_UI.cs" />
+    <Compile Include="Assets\Script\View\ProjectManageView_UI.cs" />
     <Compile Include="Assets\Script\View\DetectProcessDetailDialog_UI.cs" />
     <Compile Include="Assets\Script\Enum\RaceType.cs" />
     <Compile Include="Assets\Framework\Script\Data\SettingData.cs" />
