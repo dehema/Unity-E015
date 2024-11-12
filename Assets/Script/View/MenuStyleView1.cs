@@ -70,7 +70,7 @@ public partial class MenuStyleView1 : BaseView
             topMenuParent2.transform.GetChild(1).GetComponent<Toggle>().isOn = true;
     }
 
-    void showContentPage(string _pagName)
+    public void showContentPage(string _pagName)
     {
         GameMgr.Ins.showContentPagePrefab(_pagName, contentPage.transform);
     }

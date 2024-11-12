@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\View\MenuLeftLvFirstView.cs" />
+    <Compile Include="Assets\Script\View\ResultReport.cs" />
     <Compile Include="Assets\Script\View\Overview.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView3.cs" />
     <Compile Include="Assets\Framework\Script\Manager\DataMgr.cs" />
@@ -71,6 +72,8 @@
     <Compile Include="Assets\Script\View\SelectDetectProjectDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBFloat.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBObject.cs" />
+    <Compile Include="Assets\Script\View\DetectReportView_UI.cs" />
+    <Compile Include="Assets\Script\View\DetectReportView.cs" />
     <Compile Include="Assets\Framework\Script\Item\ExampleWidgetWithSuper_UI.cs" />
     <Compile Include="Assets\Framework\Script\Widget\SingleTemplate\Singleton.cs" />
     <Compile Include="Assets\Framework\Script\View\DebugView_UI.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Assets\Script\View\ResultReportView.cs" />
     <Compile Include="Assets\Framework\Script\UI\MenuConfig.cs" />
     <Compile Include="Assets\Framework\Script\View\TopView_UI.cs" />
+    <Compile Include="Assets\Script\View\ResultReportDetailView.cs" />
     <Compile Include="Assets\Framework\Script\UI\ViewLayerModel.cs" />
     <Compile Include="Assets\Script\Enum\NavPurpose.cs" />
     <Compile Include="Assets\Script\View\OverviewView.cs" />
@@ -138,6 +142,7 @@
     <Compile Include="Assets\Framework\Script\Manager\Utility.cs" />
     <Compile Include="Assets\Framework\Script\Item\Lang.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadingView_UI.cs" />
+    <Compile Include="Assets\Script\View\DetectReport_UI.cs" />
     <Compile Include="Assets\Framework\Script\Manager\ConfigMgr.cs" />
     <Compile Include="Assets\Script\Item\MenuItem2.cs" />
     <Compile Include="Assets\Framework\Script\Enum\ADType.cs" />
@@ -154,6 +159,7 @@
     <Compile Include="Assets\Script\View\DetectProcessLegendDialog_UI.cs" />
     <Compile Include="Assets\Script\Mgr\SceneMgr.cs" />
     <Compile Include="Assets\Framework\Script\Manager\RandomTools.cs" />
+    <Compile Include="Assets\Script\View\ResultReportDetail.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBString.cs" />
     <Compile Include="Assets\Script\View\ConsumableManageLegendDialog.cs" />
     <Compile Include="Assets\Framework\Script\Data\AudioVolumeData.cs" />
@@ -177,6 +183,7 @@
     <Compile Include="Assets\Framework\Script\Config\UIViewGen.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBBool.cs" />
     <Compile Include="Assets\Framework\Script\UI\UIViewConfig.cs" />
+    <Compile Include="Assets\Script\View\ResultReport_UI.cs" />
     <Compile Include="Assets\Framework\Script\Manager\Timer.cs" />
     <Compile Include="Assets\Script\Enum\WorldUnitType.cs" />
     <Compile Include="Assets\Script\View\SelectDetectProjectDialog.cs" />
@@ -210,11 +217,13 @@
     <Compile Include="Assets\Script\View\DailyMaintenanceView.cs" />
     <Compile Include="Assets\Script\View\DetectProcessView.cs" />
     <Compile Include="Assets\Script\View\SampleManage.cs" />
+    <Compile Include="Assets\Script\View\ResultReportDetailView_UI.cs" />
     <Compile Include="Assets\Script\Config\WorldConfig.cs" />
     <Compile Include="Assets\Framework\Script\Manager\ConstField.cs" />
     <Compile Include="Assets\Script\Enum\TagType.cs" />
     <Compile Include="Assets\Framework\Script\Widget\ImageTextMix.cs" />
     <Compile Include="Assets\Framework\Script\Enum\PostEventType.cs" />
+    <Compile Include="Assets\Script\View\DetectReport.cs" />
     <Compile Include="Assets\Script\View\ResultReportView_UI.cs" />
     <Compile Include="Assets\Script\Enum\PlayerScene.cs" />
     <Compile Include="Assets\Script\Mgr\PcrMgr.cs" />

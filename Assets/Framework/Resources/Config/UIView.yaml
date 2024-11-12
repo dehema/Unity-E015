@@ -122,5 +122,9 @@ view:
         layer: PopUI
         bgColor: "#000000B0"
         bgClose: true
-
+    ResultReportDetailView:
+        comment: 结果报告详情
+        layer: NormalUI
+        bgColor: "#FFFFFFFF"
+        escClose: true
 

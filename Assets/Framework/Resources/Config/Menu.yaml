@@ -24,16 +24,16 @@ menu:
         lang: 检测进度
         icon: Art/Icon/13检测进度
         child:
-    resultReport:
+    ResultReport:
         lang: 结果报告
         icon: Art/Icon/14结果报告
         child:
-            detectResult:
-                lang: 检查结果
-                icon: Art/Icon/241检查结果
-            detectReport:
-                lang: 检查报告
-                icon: Art/Icon/242检查报告
+            # ResultReport:
+            #     lang: 检查结果
+            #     icon: Art/Icon/241检查结果
+            # DetectReport:
+            #     lang: 检查报告
+            #     icon: Art/Icon/242检查报告
     dailyMaintenance:
         lang: 日常维护
         icon: Art/Icon/15日常维护
