@@ -35,7 +35,7 @@ menu:
             #     lang: 检查报告
             #     icon: Art/Icon/242检查报告
     dailyMaintenance:
-        lang: 日常维护
+        lang: 日常
         icon: Art/Icon/15日常维护
         child:
     systemSetting:
@@ -45,22 +45,22 @@ menu:
             projectManage:
                 lang: 项目管理
                 icon: Art/Icon/261项目管理
-            lisConfig:
+            LisConfig:
                 lang: LIS配置
                 icon: Art/Icon/262LIS配置
-            acctionManage:
+            UserManage:
                 lang: 用户管理
                 icon: Art/Icon/263用户管理
-            genetalSetting:
+            GeneralSetting:
                 lang: 常规设置
                 icon: Art/Icon/265常规设置
-            dataManage:
+            DataManage:
                 lang: 数据管理
                 icon: Art/Icon/267数据管理
-            logManage:
+            LogManage:
                 lang: 日志管理
                 icon: Art/Icon/268日志管理
-            appVersion:
+            AppVersion:
                 lang: 软件版本
                 icon: Art/Icon/269软件版本
             EquipMaintenance:

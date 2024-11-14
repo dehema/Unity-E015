@@ -68,7 +68,7 @@ public partial class SampleManage : BaseUI
         }
         GameObject originRow = content.Find("sampleTableItem").gameObject;
         sampleTableItemList.Clear();
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 14; i++)
         {
             GameObject item = Instantiate(originRow, content);
             item.SetActive(true);
