@@ -21,9 +21,17 @@ public partial class Consumable : BaseUI
     [HideInInspector]
     public Toggle consumable_Toggle;
     [HideInInspector]
+    public GameObject axe;
+    [HideInInspector]
+    public Toggle axe_Toggle;
+    [HideInInspector]
     public GameObject legend;
     [HideInInspector]
     public Button legend_Button;
+    [HideInInspector]
+    public GameObject pageConsumable;
+    [HideInInspector]
+    public GameObject pageAxe;
 
     internal void _LoadUI()    
     {
@@ -34,7 +42,11 @@ public partial class Consumable : BaseUI
         detectionReagent_Toggle = detectionReagent.GetComponent<Toggle>();
         consumable = transform.Find("$menuParent2/$consumable#Toggle").gameObject;
         consumable_Toggle = consumable.GetComponent<Toggle>();
-        legend = transform.Find("按钮/$legend#Button").gameObject;
+        axe = transform.Find("$menuParent2/$axe#Toggle").gameObject;
+        axe_Toggle = axe.GetComponent<Toggle>();
+        legend = transform.Find("$menuParent2/$legend#Button").gameObject;
         legend_Button = legend.GetComponent<Button>();
+        pageConsumable = transform.Find("$pageConsumable").gameObject;
+        pageAxe = transform.Find("$pageAxe").gameObject;
     }
 }

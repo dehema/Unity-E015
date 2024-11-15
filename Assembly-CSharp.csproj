@@ -101,8 +101,8 @@
     <Compile Include="Assets\Script\View\MenuStyleView3_UI.cs" />
     <Compile Include="Assets\Script\View\ScheduleGanttChart.cs" />
     <Compile Include="Assets\Framework\Script\Enum\TroopType.cs" />
-    <Compile Include="Assets\Framework\Script\UI\ViewConfigModel.cs" />
     <Compile Include="Assets\Script\View\EquipMaintenanceView.cs" />
+    <Compile Include="Assets\Framework\Script\UI\ViewConfigModel.cs" />
     <Compile Include="Assets\Script\View\AppVersionView_UI.cs" />
     <Compile Include="Assets\Script\View\ConsumableLegendDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\Item\ExampleWidgetWithSuper.cs" />
@@ -178,12 +178,12 @@
     <Compile Include="Assets\Framework\Script\Data\AudioVolumeData.cs" />
     <Compile Include="Assets\Script\Enum\BattleState.cs" />
     <Compile Include="Assets\Framework\Script\Manager\AudioMgr.cs" />
+    <Compile Include="Assets\Script\View\LisConfigView.cs" />
     <Compile Include="Assets\Framework\Script\Item\PoolItemBase.cs" />
     <Compile Include="Assets\Framework\Script\View\BlockView.cs" />
     <Compile Include="Assets\Framework\Script\Manager\ResMgr.cs" />
     <Compile Include="Assets\Script\View\AppVersionView.cs" />
     <Compile Include="Assets\Framework\Script\Manager\LangMgr.cs" />
-    <Compile Include="Assets\Script\View\LisConfigView.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBModify.cs" />
     <Compile Include="Assets\Framework\Script\UI\IBaseView.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView2_UI.cs" />
@@ -224,8 +224,8 @@
     <Compile Include="Assets\Framework\Script\View\TopView.cs" />
     <Compile Include="Assets\Framework\Script\Tools\ReporterLauncher.cs" />
     <Compile Include="Assets\Script\Item\ScheduleItem_UI.cs" />
-    <Compile Include="Assets\Script\View\LogManageView.cs" />
     <Compile Include="Assets\Script\View\UserManageView.cs" />
+    <Compile Include="Assets\Script\View\LogManageView.cs" />
     <Compile Include="Assets\Framework\Script\Manager\MainMgr.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView2.cs" />
     <Compile Include="Assets\Script\View\shutDown_UI.cs" />

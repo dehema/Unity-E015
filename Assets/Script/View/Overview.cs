@@ -1,64 +1,51 @@
-using com.adjust.sdk;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public partial class Overview : BaseUI
 {
-    public Button btQPCR;
-    public Button btAxe;
-    public Button btSample;
-    public GameObject qpcr;
-    public GameObject axe;
-    public GameObject sample;
-
     private void Start()
     {
         _LoadUI();
-        btQPCR.onClick.AddListener(() =>
+        tgRuning_Toggle.onValueChanged.AddListener((bool _ison) =>
         {
-            btQPCR.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 1);
-            btAxe.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 0);
-            btSample.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 0);
-            qpcr.SetActive(true);
-            axe.SetActive(false);
-            sample.SetActive(false);
+            if (!_ison)
+                return;
+            hideAllPage();
+            pageRunningDetectProject.SetActive(true);
         });
-        btAxe.onClick.AddListener(() =>
+        tgFinish_Toggle.onValueChanged.AddListener((bool _ison) =>
         {
-            btQPCR.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 0);
-            btAxe.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 1);
-            btSample.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 0);
-            qpcr.SetActive(false);
-            axe.SetActive(true);
-            sample.SetActive(false);
+            if (!_ison)
+                return;
+            hideAllPage();
+            pageFinishDetectProject.SetActive(true);
         });
-        btSample.onClick.AddListener(() =>
+        tgWait_Toggle.onValueChanged.AddListener((bool _ison) =>
         {
-            btQPCR.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 0);
-            btAxe.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 0);
-            btSample.GetComponent<Image>().color = new Color(0, 0.627451f, 0.9137255f, 1);
-            qpcr.SetActive(false);
-            axe.SetActive(false);
-            sample.SetActive(true);
+            if (!_ison)
+                return;
+            hideAllPage();
+            pageWaitDetectProject.SetActive(true);
         });
-
-        reagent_Toggle.onValueChanged.AddListener((bool _ison) =>
+        for (int i = 1; i < 10; i++)
         {
-            pageOverview.SetActive(_ison);
-        });
+            GameObject item;
+            item = Instantiate(runingSampleTableItem, runingSampleTableItem.transform.parent);
+            item.transform.Find("hor/1").GetComponent<TMP_Text>().text = (1164835456 + i).ToString();
+            item = Instantiate(waitSampleTableItem, waitSampleTableItem.transform.parent);
+            item.transform.Find("hor/1").GetComponent<TMP_Text>().text = (1164835456 + i).ToString();
+            item = Instantiate(finishSampleTableItem, finishSampleTableItem.transform.parent);
+            item.transform.Find("hor/1").GetComponent<TMP_Text>().text = (1164835456 + i).ToString();
+        }
+    }
 
-        equip_Toggle.onValueChanged.AddListener((bool _ison) =>
-        {
-            pageEqupState.SetActive(_ison);
-        });
-
-        pageOverview.SetActive(true);
-        pageEqupState.SetActive(false);
-
-
-        btQPCR.onClick.Invoke();
-        reagent_Toggle.isOn = true;
+    void hideAllPage()
+    {
+        pageRunningDetectProject.SetActive(false);
+        pageWaitDetectProject.SetActive(false);
+        pageFinishDetectProject.SetActive(false);
     }
 }

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -49,6 +48,32 @@ public partial class Consumable : BaseUI
             if (_isOn)
                 RefreshTbConsumable();
         });
+
+
+        detectionReagent_Toggle.onValueChanged.AddListener((bool _ison) =>
+        {
+            if (!_ison)
+                return;
+            pageConsumable.SetActive(true);
+            pageAxe.SetActive(false);
+        });
+        consumable_Toggle.onValueChanged.AddListener((bool _ison) =>
+        {
+            if (!_ison)
+                return;
+            pageConsumable.SetActive(true);
+            pageAxe.SetActive(false);
+        });
+        axe_Toggle.onValueChanged.AddListener((bool _ison) =>
+        {
+            if (!_ison)
+                return;
+            pageConsumable.SetActive(false);
+            pageAxe.SetActive(true);
+        });
+
+
+        //
         tgReagent.isOn = true;
         RefreshTbReagent();
     }
@@ -73,6 +98,10 @@ public partial class Consumable : BaseUI
         List<GameObject> itemList = new List<GameObject>();
         foreach (ReagentType item in values)
         {
+            if (item.ToString().Contains("AXE"))
+            {
+                continue;
+            }
             itemList.Add(addReagentItem(item));
         }
         GameObject lastItem = itemList.Last();
