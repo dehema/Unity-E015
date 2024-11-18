@@ -18,7 +18,7 @@ public partial class SampleManage : BaseUI
         _LoadUI();
         legend_Button.SetButton(() => { UIMgr.Ins.OpenView<SampleManageLegendDialog>(); });
         //Ñù±¾Ìõ
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
             GameObject item = Instantiate<GameObject>(sampleCol, sampleCol.transform.parent);
             TextMeshProUGUI text = item.transform.Find("index").GetComponent<TextMeshProUGUI>();

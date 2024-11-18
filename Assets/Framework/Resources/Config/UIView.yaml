@@ -132,4 +132,8 @@ view:
         layer: NormalUI
         bgColor: "#FFFFFFFF"
         escClose: true
+    PCRQualityControlView:
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true
 

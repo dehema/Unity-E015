@@ -122,7 +122,13 @@ public partial class Consumable : BaseUI
         item.transform.Find("hor/剩余数量").GetComponent<TextMeshProUGUI>().text = Random.Range(1, 100).ToString();
         item.transform.Find("hor/失效日期").GetComponent<TextMeshProUGUI>().text = DateTime.Now.AddDays(Random.Range(1, 100)).ToString("d");
         item.transform.Find("hor/批号").GetComponent<TextMeshProUGUI>().text = "24040910T" + (369 + Random.Range(1, 100)).ToString();
-        item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() => { UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { true, (int)type }); });
+        item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() =>
+        {
+            if (type == ReagentType.PCRQualityControl)
+                UIMgr.Ins.OpenView<PCRQualityControlView>();
+            else
+                UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { true, (int)type });
+        });
 
         return item;
     }

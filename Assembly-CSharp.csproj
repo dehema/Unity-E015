@@ -82,6 +82,7 @@
     <Compile Include="Assets\Framework\Script\View\DebugView_UI.cs" />
     <Compile Include="Assets\Script\View\ConsumableManageLegendDialog_UI.cs" />
     <Compile Include="Assets\Framework\Script\Config\GameSettingConfig.cs" />
+    <Compile Include="Assets\Script\View\PCRQualityControlView_UI.cs" />
     <Compile Include="Assets\Framework\Script\Manager\PoolMgr.cs" />
     <Compile Include="Assets\Script\View\GeneralSettingView_UI.cs" />
     <Compile Include="Assets\Framework\Script\View\ExampleViewParent.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Framework\Script\UI\ViewLayerModel.cs" />
     <Compile Include="Assets\Script\Enum\NavPurpose.cs" />
     <Compile Include="Assets\Script\View\OverviewView.cs" />
+    <Compile Include="Assets\Script\View\DailyMaintenance.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBClass.cs" />
     <Compile Include="Assets\Script\View\LogManage.cs" />
     <Compile Include="Assets\Framework\Script\Widget\ShowCommonFloatTips.cs" />
@@ -201,6 +203,7 @@
     <Compile Include="Assets\Framework\Script\DataBinding\DBBool.cs" />
     <Compile Include="Assets\Framework\Script\UI\UIViewConfig.cs" />
     <Compile Include="Assets\Script\View\ResultReport_UI.cs" />
+    <Compile Include="Assets\Script\View\PCRQualityControlView.cs" />
     <Compile Include="Assets\Framework\Script\Manager\Timer.cs" />
     <Compile Include="Assets\Script\Enum\WorldUnitType.cs" />
     <Compile Include="Assets\Script\View\SelectDetectProjectDialog.cs" />
@@ -239,6 +242,7 @@
     <Compile Include="Assets\Script\View\ResultReportDetailView_UI.cs" />
     <Compile Include="Assets\Script\Config\WorldConfig.cs" />
     <Compile Include="Assets\Framework\Script\Manager\ConstField.cs" />
+    <Compile Include="Assets\Script\View\DailyMaintenance_UI.cs" />
     <Compile Include="Assets\Script\Enum\TagType.cs" />
     <Compile Include="Assets\Framework\Script\Widget\ImageTextMix.cs" />
     <Compile Include="Assets\Framework\Script\Enum\PostEventType.cs" />
@@ -265,6 +269,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Glyph Report.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

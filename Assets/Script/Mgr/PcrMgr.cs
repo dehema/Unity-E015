@@ -55,9 +55,9 @@ public enum ConsumableType
     /// </summary>
     MagnetSleeve,
     /// <summary>
-    /// 100ul«πÕ∑∫–
+    /// 1000ul«πÕ∑∫–
     /// </summary>
-    Tips100,
+    Tips1000,
     /// <summary>
     ///  Ø¿Ø”Õ
     /// </summary>
@@ -139,8 +139,8 @@ public class PcrMgr : MonoSingleton<PcrMgr>
         {
             case ConsumableType.MagnetSleeve:
                 return "–˝◊™¥≈∞ÙÃ◊";
-            case ConsumableType.Tips100:
-                return "100ul«πÕ∑∫–";
+            case ConsumableType.Tips1000:
+                return "1000ul«πÕ∑∫–";
             case ConsumableType.Paraffin:
                 return " Ø¿Ø”Õ";
             case ConsumableType.PorePlate16:
@@ -152,7 +152,7 @@ public class PcrMgr : MonoSingleton<PcrMgr>
             case ConsumableType.Tips200:
                 return "200ul«πÕ∑∫–";
             case ConsumableType.AxeKitBox:
-                return "∫ÀÃ· ‘º¡∫–";
+                return "∫ÀÃ·…Óø◊∞Â";
             default:
                 return "";
         }

@@ -117,7 +117,7 @@ public class MachinePlanform : MonoBehaviour
         {
             case ConsumableType.MagnetSleeve:
                 return MagnetSleeve;
-            case ConsumableType.Tips100:
+            case ConsumableType.Tips1000:
                 return Tips100;
             case ConsumableType.Paraffin:
                 return Paraffin;
