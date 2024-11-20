@@ -12,7 +12,7 @@ public class MachinePlanform : MonoBehaviour
     List<Toggle> PCRSystem = new List<Toggle>();
     List<Toggle> PCRCalibration = new List<Toggle>();
     List<Toggle> MagnetSleeve = new List<Toggle>();
-    List<Toggle> Tips100 = new List<Toggle>();
+    List<Toggle> Tips1000 = new List<Toggle>();
     List<Toggle> Paraffin = new List<Toggle>();
     List<Toggle> PorePlate16 = new List<Toggle>();
     List<Toggle> MembraneSupport = new List<Toggle>();
@@ -42,7 +42,7 @@ public class MachinePlanform : MonoBehaviour
             if (_tg.name.Contains("´Å°ôÌ×ºÐ"))
                 MagnetSleeve.Add(_tg);
             if (_tg.name.Contains("100ulÇ¹Í·ºÐ"))
-                Tips100.Add(_tg);
+                Tips1000.Add(_tg);
             if (_tg.name.Contains("Ê¯À¯ÓÍ"))
                 Paraffin.Add(_tg);
             if (_tg.name.Contains("16¿×°å"))
@@ -118,7 +118,7 @@ public class MachinePlanform : MonoBehaviour
             case ConsumableType.MagnetSleeve:
                 return MagnetSleeve;
             case ConsumableType.Tips1000:
-                return Tips100;
+                return Tips1000;
             case ConsumableType.Paraffin:
                 return Paraffin;
             case ConsumableType.PorePlate16:
@@ -137,11 +137,15 @@ public class MachinePlanform : MonoBehaviour
 
     public void ShowReagent(ReagentType _reagent, bool _show)
     {
+        allReagent.ForEach((Toggle tg) => { tg.interactable = true; });
+        allConsumable.ForEach((Toggle tg) => { tg.interactable = false; });
         GetReagent(_reagent)?.ForEach((Toggle tg) => { tg.isOn = _show; });
     }
 
     public void ShowConsumable(ConsumableType _consumable, bool _show)
     {
+        allReagent.ForEach((Toggle tg) => { tg.interactable = false; });
+        allConsumable.ForEach((Toggle tg) => { tg.interactable = true; });
         GetConsumable(_consumable)?.ForEach((Toggle tg) => { tg.isOn = _show; });
     }
 

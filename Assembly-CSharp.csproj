@@ -123,6 +123,7 @@
     <Compile Include="Assets\Framework\Script\Widget\SingleTemplate\MonoSingleton.cs" />
     <Compile Include="Assets\Script\View\ConsumableLegendDialog.cs" />
     <Compile Include="Assets\Script\View\MenuContentLeftLeft2.cs" />
+    <Compile Include="Assets\Script\Item\machinePlanformFront.cs" />
     <Compile Include="Assets\Framework\Script\View\ImageTextMixView.cs" />
     <Compile Include="Assets\Script\View\Overview_UI.cs" />
     <Compile Include="Assets\Script\Enum\BuildingType.cs" />
@@ -269,7 +270,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Glyph Report.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

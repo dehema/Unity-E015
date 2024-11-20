@@ -16,6 +16,8 @@ public partial class PCRQualityControlView : BaseView
     [HideInInspector]
     public RectTransform content_Rect;
     [HideInInspector]
+    public GameObject right;
+    [HideInInspector]
     public GameObject sure;
     [HideInInspector]
     public Button sure_Button;
@@ -28,7 +30,8 @@ public partial class PCRQualityControlView : BaseView
         bg_Button = bg.GetComponent<Button>();
         content = transform.Find("$content#Rect").gameObject;
         content_Rect = content.GetComponent<RectTransform>();
-        sure = transform.Find("$content#Rect/bg/$sure#Button").gameObject;
+        right = transform.Find("$content#Rect/bg/$right").gameObject;
+        sure = transform.Find("$content#Rect/bg/$right/$sure#Button").gameObject;
         sure_Button = sure.GetComponent<Button>();
     }
 }
