@@ -157,4 +157,14 @@ public class MachinePlanform : MonoBehaviour
             _tg.isOn = _ison;
         });
     }
+
+    public void setReagentEnable(bool _enable)
+    {
+        allReagent.ForEach((Toggle tg) => { tg.interactable = _enable; });
+    }
+
+    public void setConsumableEnable(bool _enable)
+    {
+        allConsumable.ForEach((Toggle tg) => { tg.interactable = _enable; });
+    }
 }

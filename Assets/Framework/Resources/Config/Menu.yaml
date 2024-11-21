@@ -1,6 +1,6 @@
 menu:
     overview:
-        lang: 概览
+        lang: 系统概览
         icon: Art/Icon/0概览
         child:
     Consumable:
@@ -28,16 +28,16 @@ menu:
         lang: 结果报告
         icon: Art/Icon/14结果报告
         child:
-            # ResultReport:
-            #     lang: 检查结果
-            #     icon: Art/Icon/241检查结果
-            # DetectReport:
-            #     lang: 检查报告
-            #     icon: Art/Icon/242检查报告
-    dailyMaintenance:
-        lang: 日常
-        icon: Art/Icon/15日常维护
-        child:
+            DetectReport:
+                lang: 检测报告
+                icon: Art/Icon/242检查报告
+            ResultReportDetail:
+                lang: 实验数据
+                icon: Art/Icon/241检查结果
+    # dailyMaintenance:
+    #     lang: 日常
+    #     icon: Art/Icon/15日常维护
+    #     child:
     systemSetting:
         lang: 系统设置
         icon: Art/Icon/16系统设置

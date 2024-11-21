@@ -32,6 +32,14 @@ public partial class Consumable : BaseUI
     public GameObject pageConsumable;
     [HideInInspector]
     public GameObject pageAxe;
+    [HideInInspector]
+    public GameObject machine;
+    [HideInInspector]
+    public MachinePlanform machine_MachinePlanform;
+    [HideInInspector]
+    public GameObject load;
+    [HideInInspector]
+    public Button load_Button;
 
     internal void _LoadUI()    
     {
@@ -48,5 +56,9 @@ public partial class Consumable : BaseUI
         legend_Button = legend.GetComponent<Button>();
         pageConsumable = transform.Find("$pageConsumable").gameObject;
         pageAxe = transform.Find("$pageAxe").gameObject;
+        machine = transform.Find("machine/$machine#MachinePlanform").gameObject;
+        machine_MachinePlanform = machine.GetComponent<MachinePlanform>();
+        load = transform.Find("machine/$load#Button").gameObject;
+        load_Button = load.GetComponent<Button>();
     }
 }

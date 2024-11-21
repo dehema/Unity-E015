@@ -10,6 +10,22 @@ public enum ReagentType
     /// </summary>
     PCRQualityControl,
     /// <summary>
+    /// PCR扩增体系
+    /// </summary>
+    PCRFanYing,
+    /// <summary>
+    /// PCR酶
+    /// </summary>
+    PCRMei,
+    /// <summary>
+    /// PCR核酸释放剂
+    /// </summary>
+    PCRShiFang,
+    /// <summary>
+    /// PCR定标
+    /// </summary>
+    PCRCalibration,
+    /// <summary>
     /// 核提裂解液
     /// </summary>
     AXELieJie,
@@ -29,22 +45,6 @@ public enum ReagentType
     /// 核提制备
     /// </summary>
     AXEPrepare,
-    /// <summary>
-    /// PCR扩增体系
-    /// </summary>
-    PCRFanYing,
-    /// <summary>
-    /// PCR酶
-    /// </summary>
-    PCRMei,
-    /// <summary>
-    /// PCR核酸释放剂
-    /// </summary>
-    PCRShiFang,
-    /// <summary>
-    /// PCR定标
-    /// </summary>
-    PCRCalibration,
 }
 
 //耗材

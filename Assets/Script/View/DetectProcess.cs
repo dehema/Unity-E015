@@ -21,14 +21,14 @@ public partial class DetectProcess : BaseUI
             tab.init();
             tab.GetComponent<Toggle>().onValueChanged.AddListener((bool _isOn) =>
             {
-                tab.submit_Button.onClick.AddListener(() =>
-                {
-                    DetectProcessInfo info = new DetectProcessInfo();
-                    info.status = scheduleGanttChart_ScheduleGanttChart.scheduleItemList.Count == 0 ? DetectProcessStatus.Detect : DetectProcessStatus.WaitDetect;
-                    scheduleGanttChart_ScheduleGanttChart.createScheduleInfo(info);
-                    detectProcessInfoList.Remove(tab);
-                    Destroy(item);
-                });
+                //tab.submit_Button.onClick.AddListener(() =>
+                //{
+                //    DetectProcessInfo info = new DetectProcessInfo();
+                //    info.status = scheduleGanttChart_ScheduleGanttChart.scheduleItemList.Count == 0 ? DetectProcessStatus.Detect : DetectProcessStatus.WaitDetect;
+                //    scheduleGanttChart_ScheduleGanttChart.createScheduleInfo(info);
+                //    detectProcessInfoList.Remove(tab);
+                //    Destroy(item);
+                //});
             });
             detectProcessInfoList.Add(tab);
         }
@@ -37,8 +37,14 @@ public partial class DetectProcess : BaseUI
 
         timerHandler = Timer.Ins.SetTimeOut(() =>
         {
-            detectProcessInfoList.First().GetComponent<Toggle>().isOn = true;
-        }, 0.5f);
+            for (int i = 0; i < 3; i++)
+            {
+                DetectProcessInfo info = new DetectProcessInfo();
+                info.status = scheduleGanttChart_ScheduleGanttChart.scheduleItemList.Count == 0 ? DetectProcessStatus.Detect : DetectProcessStatus.WaitDetect;
+                scheduleGanttChart_ScheduleGanttChart.createScheduleInfo(info);
+            }
+        }, 0.2f);
+
     }
 
     private void OnDestroy()

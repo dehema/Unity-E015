@@ -136,4 +136,14 @@ view:
         layer: PopUI
         bgColor: "#000000B0"
         bgClose: true
+    DailyMaintenance:
+        comment: 日常维护
+        layer: NormalUI
+        bgColor: "#FFFFFFFF"
+        escClose: true
+    DisinfectDialog:
+        comment: 消毒
+        layer: PopUI
+        bgColor: "#000000B0"
+        bgClose: true
 

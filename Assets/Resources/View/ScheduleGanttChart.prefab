@@ -1334,6 +1334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8523c96d3515d40ad283f9f231a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scheduleItemList: []
   legend: {fileID: 0}
   legend_Button: {fileID: 0}
   title: {fileID: 0}

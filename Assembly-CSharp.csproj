@@ -150,6 +150,7 @@
     <Compile Include="Assets\Script\View\MainView.cs" />
     <Compile Include="Assets\Framework\Script\DataBinding\DBHandler.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadSceneView.cs" />
+    <Compile Include="Assets\Script\View\DisinfectDialog_UI.cs" />
     <Compile Include="Assets\Script\Item\SampleTableItem_UI.cs" />
     <Compile Include="Assets\Script\View\MenuStyleView1.cs" />
     <Compile Include="Assets\Framework\Script\Data\GameData.cs" />
@@ -255,6 +256,7 @@
     <Compile Include="Assets\Framework\Script\UI\BaseUI.cs" />
     <Compile Include="Assets\Script\Item\ScheduleItem.cs" />
     <Compile Include="Assets\Script\View\Consumable_UI.cs" />
+    <Compile Include="Assets\Script\View\DisinfectDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

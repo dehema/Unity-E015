@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -28,6 +30,8 @@ public partial class Consumable : BaseUI
         legend_Button.onClick.AddListener(() => { UIMgr.Ins.OpenView<ConsumableManageLegendDialog>(); });
         tbReagent.SetActive(true);
         tbConsumable.SetActive(false);
+        pageConsumable.SetActive(true);
+        pageAxe.SetActive(false);
         rowReagent.SetActive(false);
         rowConsumable.SetActive(false);
         tgReagent.onValueChanged.AddListener((bool _isOn) =>
@@ -36,6 +40,9 @@ public partial class Consumable : BaseUI
             tbConsumable.SetActive(!_isOn);
             if (_isOn)
                 RefreshTbReagent();
+            machine_MachinePlanform.setAll(false);
+            machine_MachinePlanform.setReagentEnable(true);
+            machine_MachinePlanform.setConsumableEnable(false);
         });
         tgConsumable.onValueChanged.AddListener((bool _isOn) =>
         {
@@ -47,6 +54,9 @@ public partial class Consumable : BaseUI
             tbConsumable.SetActive(_isOn);
             if (_isOn)
                 RefreshTbConsumable();
+            machine_MachinePlanform.setAll(false);
+            machine_MachinePlanform.setReagentEnable(false);
+            machine_MachinePlanform.setConsumableEnable(true);
         });
 
 
@@ -72,7 +82,7 @@ public partial class Consumable : BaseUI
             pageAxe.SetActive(true);
         });
 
-
+        load_Button.onClick.AddListener(() => { UIMgr.Ins.OpenView<PCRQualityControlView>(); });
         //
         tgReagent.isOn = true;
         RefreshTbReagent();
@@ -122,14 +132,18 @@ public partial class Consumable : BaseUI
         item.transform.Find("hor/剩余数量").GetComponent<TextMeshProUGUI>().text = Random.Range(1, 100).ToString();
         item.transform.Find("hor/失效日期").GetComponent<TextMeshProUGUI>().text = DateTime.Now.AddDays(Random.Range(1, 100)).ToString("d");
         item.transform.Find("hor/批号").GetComponent<TextMeshProUGUI>().text = "24040910T" + (369 + Random.Range(1, 100)).ToString();
-        item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() =>
+        //item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() =>
+        //{
+        //    if (type == ReagentType.PCRQualityControl)
+        //        UIMgr.Ins.OpenView<PCRQualityControlView>();
+        //    else
+        //        UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { true, (int)type });
+        //});
+        item.GetComponent<Toggle>().onValueChanged.AddListener((bool _ison) =>
         {
-            if (type == ReagentType.PCRQualityControl)
-                UIMgr.Ins.OpenView<PCRQualityControlView>();
-            else
-                UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { true, (int)type });
+            machine_MachinePlanform.setAll(false);
+            machine_MachinePlanform.ShowReagent(_type, true);
         });
-
         return item;
     }
 
@@ -160,7 +174,13 @@ public partial class Consumable : BaseUI
         item.transform.Find("hor/剩余数量").GetComponent<TextMeshProUGUI>().text = Random.Range(1, 100).ToString();
         item.transform.Find("hor/失效日期").GetComponent<TextMeshProUGUI>().text = DateTime.Now.AddDays(Random.Range(1, 100)).ToString("d");
         item.transform.Find("hor/批号").GetComponent<TextMeshProUGUI>().text = "24040910T" + (369 + Random.Range(1, 100)).ToString();
-        item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() => { UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { false, (int)type }); });
+        //item.transform.Find("hor/查看位置").GetComponent<Button>().onClick.AddListener(() => { UIMgr.Ins.OpenView<ConsumableLegendDialog>(new object[2] { false, (int)type }); });
+
+        item.GetComponent<Toggle>().onValueChanged.AddListener((bool _ison) =>
+        {
+            machine_MachinePlanform.setAll(false);
+            machine_MachinePlanform.ShowConsumable(_type, true);
+        });
         return item;
     }
 }

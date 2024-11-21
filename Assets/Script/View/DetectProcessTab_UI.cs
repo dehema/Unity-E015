@@ -15,10 +15,6 @@ public partial class DetectProcessTab : BaseUI
     [HideInInspector]
     public TextMeshProUGUI processID_TextMeshProUGUI;
     [HideInInspector]
-    public GameObject detectProjectParent;
-    [HideInInspector]
-    public RectTransform detectProjectParent_Rect;
-    [HideInInspector]
     public GameObject detectProject;
     [HideInInspector]
     public TextMeshProUGUI detectProject_TextMeshProUGUI;
@@ -27,31 +23,21 @@ public partial class DetectProcessTab : BaseUI
     [HideInInspector]
     public Toggle isUrgent_Toggle;
     [HideInInspector]
-    public GameObject createTime;
-    [HideInInspector]
-    public TextMeshProUGUI createTime_TextMeshProUGUI;
-    [HideInInspector]
     public GameObject slotsNum;
     [HideInInspector]
     public TextMeshProUGUI slotsNum_TextMeshProUGUI;
     [HideInInspector]
-    public GameObject startTime;
-    [HideInInspector]
-    public TextMeshProUGUI startTime_TextMeshProUGUI;
-    [HideInInspector]
-    public GameObject endTime;
-    [HideInInspector]
-    public TextMeshProUGUI endTime_TextMeshProUGUI;
-    [HideInInspector]
-    public GameObject sampleSlot;
-    [HideInInspector]
-    public GameObject submit;
-    [HideInInspector]
-    public Button submit_Button;
-    [HideInInspector]
     public GameObject detail;
     [HideInInspector]
     public Button detail_Button;
+    [HideInInspector]
+    public GameObject up;
+    [HideInInspector]
+    public Button up_Button;
+    [HideInInspector]
+    public GameObject down;
+    [HideInInspector]
+    public Button down_Button;
 
     internal void _LoadUI()    
     {
@@ -59,24 +45,17 @@ public partial class DetectProcessTab : BaseUI
         processIDParent_Rect = processIDParent.GetComponent<RectTransform>();
         processID = transform.Find("$processIDParent#Rect/$processID#TextMeshProUGUI").gameObject;
         processID_TextMeshProUGUI = processID.GetComponent<TextMeshProUGUI>();
-        detectProjectParent = transform.Find("$detectProjectParent#Rect").gameObject;
-        detectProjectParent_Rect = detectProjectParent.GetComponent<RectTransform>();
-        detectProject = transform.Find("$detectProjectParent#Rect/$detectProject#TextMeshProUGUI").gameObject;
+        detectProject = transform.Find("$processIDParent#Rect/$detectProject#TextMeshProUGUI").gameObject;
         detectProject_TextMeshProUGUI = detectProject.GetComponent<TextMeshProUGUI>();
-        isUrgent = transform.Find("$isUrgent#Toggle").gameObject;
+        isUrgent = transform.Find("$processIDParent#Rect/$isUrgent#Toggle").gameObject;
         isUrgent_Toggle = isUrgent.GetComponent<Toggle>();
-        createTime = transform.Find("创建时间/$createTime#TextMeshProUGUI").gameObject;
-        createTime_TextMeshProUGUI = createTime.GetComponent<TextMeshProUGUI>();
-        slotsNum = transform.Find("占用孔位/$slotsNum#TextMeshProUGUI").gameObject;
+        slotsNum = transform.Find("$processIDParent#Rect/$slotsNum#TextMeshProUGUI").gameObject;
         slotsNum_TextMeshProUGUI = slotsNum.GetComponent<TextMeshProUGUI>();
-        startTime = transform.Find("预计开始时间/$startTime#TextMeshProUGUI").gameObject;
-        startTime_TextMeshProUGUI = startTime.GetComponent<TextMeshProUGUI>();
-        endTime = transform.Find("结束时间/$endTime#TextMeshProUGUI").gameObject;
-        endTime_TextMeshProUGUI = endTime.GetComponent<TextMeshProUGUI>();
-        sampleSlot = transform.Find("$sampleSlot").gameObject;
-        submit = transform.Find("$submit#Button").gameObject;
-        submit_Button = submit.GetComponent<Button>();
-        detail = transform.Find("$detail#Button").gameObject;
+        detail = transform.Find("$processIDParent#Rect/operate/$detail#Button").gameObject;
         detail_Button = detail.GetComponent<Button>();
+        up = transform.Find("$processIDParent#Rect/operate/$up#Button").gameObject;
+        up_Button = up.GetComponent<Button>();
+        down = transform.Find("$processIDParent#Rect/operate/$down#Button").gameObject;
+        down_Button = down.GetComponent<Button>();
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public partial class shutDown : BaseUI
 {
@@ -10,15 +11,15 @@ public partial class shutDown : BaseUI
     [HideInInspector]
     public Button account_Button;
     [HideInInspector]
-    public GameObject shutdown;
+    public GameObject shotDown;
     [HideInInspector]
-    public Button shutdown_Button;
+    public TMP_Dropdown shotDown_TMP_Dropdown;
 
     internal void _LoadUI()    
     {
         account = transform.Find("$account#Button").gameObject;
         account_Button = account.GetComponent<Button>();
-        shutdown = transform.Find("$shutdown#Button").gameObject;
-        shutdown_Button = shutdown.GetComponent<Button>();
+        shotDown = transform.Find("$shotDown#TMP_Dropdown").gameObject;
+        shotDown_TMP_Dropdown = shotDown.GetComponent<TMP_Dropdown>();
     }
 }
