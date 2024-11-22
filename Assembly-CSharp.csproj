@@ -114,6 +114,7 @@
     <Compile Include="Assets\Script\View\DetectProcess.cs" />
     <Compile Include="Assets\Framework\Script\Item\ExampleWidget.cs" />
     <Compile Include="Assets\Script\View\DetectProcessLegendDialog.cs" />
+    <Compile Include="Assets\Script\View\DetectStrategy.cs" />
     <Compile Include="Assets\Script\View\PatientInfoDialog.cs" />
     <Compile Include="Assets\Script\Enum\AnimatorParams.cs" />
     <Compile Include="Assets\Framework\Script\Widget\ImageAutoAdaptScreen.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="Assets\Framework\Script\Data\GameData.cs" />
     <Compile Include="Assets\Framework\Script\Manager\Utility.cs" />
     <Compile Include="Assets\Script\View\LogManage_UI.cs" />
+    <Compile Include="Assets\Script\View\DetectStrategy_UI.cs" />
     <Compile Include="Assets\Framework\Script\Item\Lang.cs" />
     <Compile Include="Assets\Framework\Script\View\LoadingView_UI.cs" />
     <Compile Include="Assets\Script\View\DetectReport_UI.cs" />
@@ -173,6 +175,7 @@
     <Compile Include="Assets\Script\View\ScheduleGanttChart_UI.cs" />
     <Compile Include="Assets\Framework\Script\View\DebugView.cs" />
     <Compile Include="Assets\Script\View\SampleManageLegendDialog.cs" />
+    <Compile Include="Assets\Script\View\DetectStrategyView.cs" />
     <Compile Include="Assets\Script\View\DetectProcessLegendDialog_UI.cs" />
     <Compile Include="Assets\Script\Mgr\SceneMgr.cs" />
     <Compile Include="Assets\Framework\Script\Manager\RandomTools.cs" />
@@ -242,6 +245,7 @@
     <Compile Include="Assets\Script\View\DetectProcessView.cs" />
     <Compile Include="Assets\Script\View\SampleManage.cs" />
     <Compile Include="Assets\Script\View\ResultReportDetailView_UI.cs" />
+    <Compile Include="Assets\Script\View\DetectStrategyView_UI.cs" />
     <Compile Include="Assets\Script\Config\WorldConfig.cs" />
     <Compile Include="Assets\Framework\Script\Manager\ConstField.cs" />
     <Compile Include="Assets\Script\View\DailyMaintenance_UI.cs" />

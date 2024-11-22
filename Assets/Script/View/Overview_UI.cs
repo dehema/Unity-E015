@@ -13,46 +13,28 @@ public partial class Overview : BaseUI
     [HideInInspector]
     public GameObject pageOverview;
     [HideInInspector]
-    public GameObject tgRuning;
+    public GameObject btConsumable;
     [HideInInspector]
-    public Toggle tgRuning_Toggle;
+    public Button btConsumable_Button;
     [HideInInspector]
-    public GameObject tgFinish;
+    public GameObject btReagent;
     [HideInInspector]
-    public Toggle tgFinish_Toggle;
+    public Button btReagent_Button;
     [HideInInspector]
-    public GameObject tgWait;
+    public GameObject pageConsumable;
     [HideInInspector]
-    public Toggle tgWait_Toggle;
-    [HideInInspector]
-    public GameObject pageRunningDetectProject;
-    [HideInInspector]
-    public GameObject runingSampleTableItem;
-    [HideInInspector]
-    public GameObject pageWaitDetectProject;
-    [HideInInspector]
-    public GameObject waitSampleTableItem;
-    [HideInInspector]
-    public GameObject pageFinishDetectProject;
-    [HideInInspector]
-    public GameObject finishSampleTableItem;
+    public GameObject pageReagent;
 
     internal void _LoadUI()    
     {
         content = transform.Find("$content#Rect").gameObject;
         content_Rect = content.GetComponent<RectTransform>();
         pageOverview = transform.Find("$content#Rect/$pageOverview").gameObject;
-        tgRuning = transform.Find("$content#Rect/$pageOverview/DetectProject/menu/hor/$tgRuning#Toggle").gameObject;
-        tgRuning_Toggle = tgRuning.GetComponent<Toggle>();
-        tgFinish = transform.Find("$content#Rect/$pageOverview/DetectProject/menu/hor/$tgFinish#Toggle").gameObject;
-        tgFinish_Toggle = tgFinish.GetComponent<Toggle>();
-        tgWait = transform.Find("$content#Rect/$pageOverview/DetectProject/menu/hor/$tgWait#Toggle").gameObject;
-        tgWait_Toggle = tgWait.GetComponent<Toggle>();
-        pageRunningDetectProject = transform.Find("$content#Rect/$pageOverview/DetectProject/hor/$pageRunningDetectProject").gameObject;
-        runingSampleTableItem = transform.Find("$content#Rect/$pageOverview/DetectProject/hor/$pageRunningDetectProject/tbSample/$runingSampleTableItem").gameObject;
-        pageWaitDetectProject = transform.Find("$content#Rect/$pageOverview/DetectProject/hor/$pageWaitDetectProject").gameObject;
-        waitSampleTableItem = transform.Find("$content#Rect/$pageOverview/DetectProject/hor/$pageWaitDetectProject/tbSample/$waitSampleTableItem").gameObject;
-        pageFinishDetectProject = transform.Find("$content#Rect/$pageOverview/DetectProject/hor/$pageFinishDetectProject").gameObject;
-        finishSampleTableItem = transform.Find("$content#Rect/$pageOverview/DetectProject/hor/$pageFinishDetectProject/tbSample/$finishSampleTableItem").gameObject;
+        btConsumable = transform.Find("$content#Rect/$pageOverview/right/Consumable/title/$btConsumable#Button").gameObject;
+        btConsumable_Button = btConsumable.GetComponent<Button>();
+        btReagent = transform.Find("$content#Rect/$pageOverview/right/Consumable/title/$btReagent#Button").gameObject;
+        btReagent_Button = btReagent.GetComponent<Button>();
+        pageConsumable = transform.Find("$content#Rect/$pageOverview/right/Consumable/$pageConsumable").gameObject;
+        pageReagent = transform.Find("$content#Rect/$pageOverview/right/Consumable/$pageReagent").gameObject;
     }
 }

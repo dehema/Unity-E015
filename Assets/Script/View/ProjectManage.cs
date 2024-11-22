@@ -10,6 +10,9 @@ public partial class ProjectManage : BaseUI
         detectManage_Toggle.onValueChanged.AddListener((bool _ison) => { showPage(pageDetectManage); });
         fluoSetting_Toggle.onValueChanged.AddListener((bool _ison) => { showPage(pageFluoSetting); });
         reactionProgram_Toggle.onValueChanged.AddListener((bool _ison) => { showPage(pageReactionProgram); });
+        qualityControl_Toggle.onValueChanged.AddListener((bool _ison) => { showPage(pageQualityControl); });
+
+        showPage(pageAutoProcess);
     }
 
     void showPage(GameObject _page)
@@ -19,6 +22,7 @@ public partial class ProjectManage : BaseUI
         pageDetectManage.SetActive(false);
         pageFluoSetting.SetActive(false);
         pageReactionProgram.SetActive(false);
+        pageQualityControl.SetActive(false);
         _page.SetActive(true);
     }
 }

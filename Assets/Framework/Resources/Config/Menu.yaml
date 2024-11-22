@@ -76,3 +76,6 @@ menu:
                     qpcr:
                         lang: qpcr
                         icon: Art/Icon/2603qpcr
+            DetectStrategy:
+                lang: 检测策略
+                icon: Art/Icon/检测策略

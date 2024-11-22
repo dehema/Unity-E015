@@ -27,6 +27,10 @@ public partial class ProjectManage : BaseUI
     [HideInInspector]
     public Toggle autoProcess_Toggle;
     [HideInInspector]
+    public GameObject qualityControl;
+    [HideInInspector]
+    public Toggle qualityControl_Toggle;
+    [HideInInspector]
     public GameObject pageDetectManage;
     [HideInInspector]
     public GameObject pageReactionProgram;
@@ -36,6 +40,8 @@ public partial class ProjectManage : BaseUI
     public GameObject pageAxeProcess;
     [HideInInspector]
     public GameObject pageAutoProcess;
+    [HideInInspector]
+    public GameObject pageQualityControl;
 
     internal void _LoadUI()    
     {
@@ -49,10 +55,13 @@ public partial class ProjectManage : BaseUI
         axeProcess_Toggle = axeProcess.GetComponent<Toggle>();
         autoProcess = transform.Find("menu/$autoProcess#Toggle").gameObject;
         autoProcess_Toggle = autoProcess.GetComponent<Toggle>();
+        qualityControl = transform.Find("menu/$qualityControl#Toggle").gameObject;
+        qualityControl_Toggle = qualityControl.GetComponent<Toggle>();
         pageDetectManage = transform.Find("page/$pageDetectManage").gameObject;
         pageReactionProgram = transform.Find("page/$pageReactionProgram").gameObject;
         pageFluoSetting = transform.Find("page/$pageFluoSetting").gameObject;
         pageAxeProcess = transform.Find("page/$pageAxeProcess").gameObject;
         pageAutoProcess = transform.Find("page/$pageAutoProcess").gameObject;
+        pageQualityControl = transform.Find("page/$pageQualityControl").gameObject;
     }
 }
